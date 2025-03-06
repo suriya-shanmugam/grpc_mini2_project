@@ -1,1 +1,0 @@
-/usr/bin/c++  -g3 -fopenmp -rdynamic CMakeFiles/collision_parser_benchmark.dir/collision_parser_benchmark.cpp.o -o collision_parser_benchmark  libcollision_manager.a _deps/benchmark-build/src/libbenchmark_main.a /usr/lib/gcc/x86_64-linux-gnu/13/libgomp.so /usr/lib/x86_64-linux-gnu/libpthread.a _deps/benchmark-build/src/libbenchmark.a -lrt 

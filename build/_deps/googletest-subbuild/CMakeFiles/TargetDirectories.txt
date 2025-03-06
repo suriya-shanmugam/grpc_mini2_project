@@ -1,3 +1,0 @@
-/home/suriya-018231499/sem2/cmpe273/mini2/collisionproject/275_mini1/temp2/build/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir
-/home/suriya-018231499/sem2/cmpe273/mini2/collisionproject/275_mini1/temp2/build/_deps/googletest-subbuild/CMakeFiles/edit_cache.dir
-/home/suriya-018231499/sem2/cmpe273/mini2/collisionproject/275_mini1/temp2/build/_deps/googletest-subbuild/CMakeFiles/rebuild_cache.dir

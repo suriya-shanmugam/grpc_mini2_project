@@ -1,1 +1,0 @@
-/usr/bin/c++  -g3 -fopenmp -rdynamic CMakeFiles/collision_manager_test.dir/collision_manager_test.cpp.o -o collision_manager_test  libcollision_manager.a lib/libgtest_main.a /usr/lib/gcc/x86_64-linux-gnu/13/libgomp.so /usr/lib/x86_64-linux-gnu/libpthread.a lib/libgtest.a 
