@@ -23,11 +23,12 @@ PROTOBUF_PRAGMA_INIT_SEG
 namespace _pb = ::google::protobuf;
 namespace _pbi = ::google::protobuf::internal;
 namespace _fl = ::google::protobuf::internal::field_layout;
+namespace collision_proto {
 
 inline constexpr QueryCondition::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : field_{static_cast< ::QueryFields >(0)},
-        condition_{static_cast< ::Condition >(0)},
+      : field_{static_cast< ::collision_proto::QueryFields >(0)},
+        condition_{static_cast< ::collision_proto::Condition >(0)},
         data_{},
         _cached_size_{0},
         _oneof_case_{} {}
@@ -46,7 +47,7 @@ struct QueryConditionDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 QueryConditionDefaultTypeInternal _QueryCondition_default_instance_;
 
-inline constexpr GRPCollision::Impl_::Impl_(
+inline constexpr Collision::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : crash_date_(
             &::google::protobuf::internal::fixed_address_empty_string,
@@ -114,18 +115,18 @@ inline constexpr GRPCollision::Impl_::Impl_(
         _cached_size_{0} {}
 
 template <typename>
-PROTOBUF_CONSTEXPR GRPCollision::GRPCollision(::_pbi::ConstantInitialized)
+PROTOBUF_CONSTEXPR Collision::Collision(::_pbi::ConstantInitialized)
     : _impl_(::_pbi::ConstantInitialized()) {}
-struct GRPCollisionDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR GRPCollisionDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~GRPCollisionDefaultTypeInternal() {}
+struct CollisionDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CollisionDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CollisionDefaultTypeInternal() {}
   union {
-    GRPCollision _instance;
+    Collision _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GRPCollisionDefaultTypeInternal _GRPCollision_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CollisionDefaultTypeInternal _Collision_default_instance_;
 
 inline constexpr QueryResponse::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
@@ -164,6 +165,7 @@ struct QueryRequestDefaultTypeInternal {
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 QueryRequestDefaultTypeInternal _QueryRequest_default_instance_;
+}  // namespace collision_proto
 static const ::_pb::EnumDescriptor* file_level_enum_descriptors_collision_2eproto[2];
 static constexpr const ::_pb::ServiceDescriptor**
     file_level_service_descriptors_collision_2eproto = nullptr;
@@ -171,146 +173,149 @@ const ::uint32_t
     TableStruct_collision_2eproto::offsets[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
         protodesc_cold) = {
         ~0u,  // no _has_bits_
-        PROTOBUF_FIELD_OFFSET(::QueryCondition, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::QueryCondition, _internal_metadata_),
         ~0u,  // no _extensions_
-        PROTOBUF_FIELD_OFFSET(::QueryCondition, _impl_._oneof_case_[0]),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::QueryCondition, _impl_._oneof_case_[0]),
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::QueryCondition, _impl_.field_),
-        PROTOBUF_FIELD_OFFSET(::QueryCondition, _impl_.condition_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::QueryCondition, _impl_.field_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::QueryCondition, _impl_.condition_),
         ::_pbi::kInvalidFieldOffsetTag,
         ::_pbi::kInvalidFieldOffsetTag,
-        PROTOBUF_FIELD_OFFSET(::QueryCondition, _impl_.data_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::QueryCondition, _impl_.data_),
         ~0u,  // no _has_bits_
-        PROTOBUF_FIELD_OFFSET(::QueryRequest, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::QueryRequest, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::QueryRequest, _impl_.queries_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::QueryRequest, _impl_.queries_),
         ~0u,  // no _has_bits_
-        PROTOBUF_FIELD_OFFSET(::GRPCollision, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::Collision, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::GRPCollision, _impl_.crash_date_),
-        PROTOBUF_FIELD_OFFSET(::GRPCollision, _impl_.crash_time_),
-        PROTOBUF_FIELD_OFFSET(::GRPCollision, _impl_.borough_),
-        PROTOBUF_FIELD_OFFSET(::GRPCollision, _impl_.zip_code_),
-        PROTOBUF_FIELD_OFFSET(::GRPCollision, _impl_.latitude_),
-        PROTOBUF_FIELD_OFFSET(::GRPCollision, _impl_.longitude_),
-        PROTOBUF_FIELD_OFFSET(::GRPCollision, _impl_.location_),
-        PROTOBUF_FIELD_OFFSET(::GRPCollision, _impl_.on_street_name_),
-        PROTOBUF_FIELD_OFFSET(::GRPCollision, _impl_.cross_street_name_),
-        PROTOBUF_FIELD_OFFSET(::GRPCollision, _impl_.off_street_name_),
-        PROTOBUF_FIELD_OFFSET(::GRPCollision, _impl_.number_of_persons_injured_),
-        PROTOBUF_FIELD_OFFSET(::GRPCollision, _impl_.number_of_persons_killed_),
-        PROTOBUF_FIELD_OFFSET(::GRPCollision, _impl_.number_of_pedestrians_injured_),
-        PROTOBUF_FIELD_OFFSET(::GRPCollision, _impl_.number_of_pedestrians_killed_),
-        PROTOBUF_FIELD_OFFSET(::GRPCollision, _impl_.number_of_cyclist_injured_),
-        PROTOBUF_FIELD_OFFSET(::GRPCollision, _impl_.number_of_cyclist_killed_),
-        PROTOBUF_FIELD_OFFSET(::GRPCollision, _impl_.number_of_motorist_injured_),
-        PROTOBUF_FIELD_OFFSET(::GRPCollision, _impl_.number_of_motorist_killed_),
-        PROTOBUF_FIELD_OFFSET(::GRPCollision, _impl_.contributing_factor_vehicle_1_),
-        PROTOBUF_FIELD_OFFSET(::GRPCollision, _impl_.contributing_factor_vehicle_2_),
-        PROTOBUF_FIELD_OFFSET(::GRPCollision, _impl_.contributing_factor_vehicle_3_),
-        PROTOBUF_FIELD_OFFSET(::GRPCollision, _impl_.contributing_factor_vehicle_4_),
-        PROTOBUF_FIELD_OFFSET(::GRPCollision, _impl_.contributing_factor_vehicle_5_),
-        PROTOBUF_FIELD_OFFSET(::GRPCollision, _impl_.collision_id_),
-        PROTOBUF_FIELD_OFFSET(::GRPCollision, _impl_.vehicle_type_code_1_),
-        PROTOBUF_FIELD_OFFSET(::GRPCollision, _impl_.vehicle_type_code_2_),
-        PROTOBUF_FIELD_OFFSET(::GRPCollision, _impl_.vehicle_type_code_3_),
-        PROTOBUF_FIELD_OFFSET(::GRPCollision, _impl_.vehicle_type_code_4_),
-        PROTOBUF_FIELD_OFFSET(::GRPCollision, _impl_.vehicle_type_code_5_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::Collision, _impl_.crash_date_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::Collision, _impl_.crash_time_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::Collision, _impl_.borough_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::Collision, _impl_.zip_code_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::Collision, _impl_.latitude_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::Collision, _impl_.longitude_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::Collision, _impl_.location_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::Collision, _impl_.on_street_name_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::Collision, _impl_.cross_street_name_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::Collision, _impl_.off_street_name_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::Collision, _impl_.number_of_persons_injured_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::Collision, _impl_.number_of_persons_killed_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::Collision, _impl_.number_of_pedestrians_injured_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::Collision, _impl_.number_of_pedestrians_killed_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::Collision, _impl_.number_of_cyclist_injured_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::Collision, _impl_.number_of_cyclist_killed_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::Collision, _impl_.number_of_motorist_injured_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::Collision, _impl_.number_of_motorist_killed_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::Collision, _impl_.contributing_factor_vehicle_1_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::Collision, _impl_.contributing_factor_vehicle_2_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::Collision, _impl_.contributing_factor_vehicle_3_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::Collision, _impl_.contributing_factor_vehicle_4_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::Collision, _impl_.contributing_factor_vehicle_5_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::Collision, _impl_.collision_id_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::Collision, _impl_.vehicle_type_code_1_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::Collision, _impl_.vehicle_type_code_2_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::Collision, _impl_.vehicle_type_code_3_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::Collision, _impl_.vehicle_type_code_4_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::Collision, _impl_.vehicle_type_code_5_),
         ~0u,  // no _has_bits_
-        PROTOBUF_FIELD_OFFSET(::QueryResponse, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::QueryResponse, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::QueryResponse, _impl_.collision_),
+        PROTOBUF_FIELD_OFFSET(::collision_proto::QueryResponse, _impl_.collision_),
 };
 
 static const ::_pbi::MigrationSchema
     schemas[] ABSL_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-        {0, -1, -1, sizeof(::QueryCondition)},
-        {13, -1, -1, sizeof(::QueryRequest)},
-        {22, -1, -1, sizeof(::GRPCollision)},
-        {59, -1, -1, sizeof(::QueryResponse)},
+        {0, -1, -1, sizeof(::collision_proto::QueryCondition)},
+        {13, -1, -1, sizeof(::collision_proto::QueryRequest)},
+        {22, -1, -1, sizeof(::collision_proto::Collision)},
+        {59, -1, -1, sizeof(::collision_proto::QueryResponse)},
 };
 static const ::_pb::Message* const file_default_instances[] = {
-    &::_QueryCondition_default_instance_._instance,
-    &::_QueryRequest_default_instance_._instance,
-    &::_GRPCollision_default_instance_._instance,
-    &::_QueryResponse_default_instance_._instance,
+    &::collision_proto::_QueryCondition_default_instance_._instance,
+    &::collision_proto::_QueryRequest_default_instance_._instance,
+    &::collision_proto::_Collision_default_instance_._instance,
+    &::collision_proto::_QueryResponse_default_instance_._instance,
 };
 const char descriptor_table_protodef_collision_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
     protodesc_cold) = {
-    "\n\017collision.proto\"|\n\016QueryCondition\022\033\n\005f"
-    "ield\030\001 \001(\0162\014.QueryFields\022\035\n\tcondition\030\002 "
-    "\001(\0162\n.Condition\022\022\n\010str_data\030\003 \001(\tH\000\022\022\n\010i"
-    "nt_data\030\004 \001(\005H\000B\006\n\004data\"0\n\014QueryRequest\022"
-    " \n\007queries\030\001 \003(\0132\017.QueryCondition\"\344\006\n\014GR"
-    "PCollision\022\022\n\ncrash_date\030\001 \001(\t\022\022\n\ncrash_"
-    "time\030\002 \001(\t\022\017\n\007borough\030\003 \001(\t\022\020\n\010zip_code\030"
-    "\004 \001(\r\022\020\n\010latitude\030\005 \001(\002\022\021\n\tlongitude\030\006 \001"
-    "(\002\022\020\n\010location\030\007 \001(\t\022\026\n\016on_street_name\030\010"
-    " \001(\t\022\031\n\021cross_street_name\030\t \001(\t\022\027\n\017off_s"
-    "treet_name\030\n \001(\t\022!\n\031number_of_persons_in"
-    "jured\030\013 \001(\r\022 \n\030number_of_persons_killed\030"
-    "\014 \001(\r\022%\n\035number_of_pedestrians_injured\030\r"
-    " \001(\r\022$\n\034number_of_pedestrians_killed\030\016 \001"
-    "(\r\022!\n\031number_of_cyclist_injured\030\017 \001(\r\022 \n"
-    "\030number_of_cyclist_killed\030\020 \001(\r\022\"\n\032numbe"
-    "r_of_motorist_injured\030\021 \001(\r\022!\n\031number_of"
-    "_motorist_killed\030\022 \001(\r\022%\n\035contributing_f"
-    "actor_vehicle_1\030\023 \001(\t\022%\n\035contributing_fa"
-    "ctor_vehicle_2\030\024 \001(\t\022%\n\035contributing_fac"
-    "tor_vehicle_3\030\025 \001(\t\022%\n\035contributing_fact"
-    "or_vehicle_4\030\026 \001(\t\022%\n\035contributing_facto"
-    "r_vehicle_5\030\027 \001(\t\022\024\n\014collision_id\030\030 \001(\004\022"
-    "\033\n\023vehicle_type_code_1\030\031 \001(\t\022\033\n\023vehicle_"
-    "type_code_2\030\032 \001(\t\022\033\n\023vehicle_type_code_3"
-    "\030\033 \001(\t\022\033\n\023vehicle_type_code_4\030\034 \001(\t\022\033\n\023v"
-    "ehicle_type_code_5\030\035 \001(\t\"1\n\rQueryRespons"
-    "e\022 \n\tcollision\030\001 \003(\0132\r.GRPCollision*\'\n\tC"
-    "ondition\022\n\n\006EQUALS\020\000\022\016\n\nNOT_EQUALS\020\001*\357\005\n"
-    "\013QueryFields\022\016\n\nCRASH_DATE\020\000\022\016\n\nCRASH_TI"
-    "ME\020\001\022\013\n\007BOROUGH\020\002\022\014\n\010ZIP_CODE\020\003\022\014\n\010LATIT"
-    "UDE\020\004\022\r\n\tLONGITUDE\020\005\022\014\n\010LOCATION\020\006\022\022\n\016ON"
-    "_STREET_NAME\020\007\022\025\n\021CROSS_STREET_NAME\020\010\022\023\n"
-    "\017OFF_STREET_NAME\020\t\022\035\n\031NUMBER_OF_PERSONS_"
-    "INJURED\020\n\022\034\n\030NUMBER_OF_PERSONS_KILLED\020\013\022"
-    "!\n\035NUMBER_OF_PEDESTRIANS_INJURED\020\014\022 \n\034NU"
-    "MBER_OF_PEDESTRIANS_KILLED\020\r\022\035\n\031NUMBER_O"
-    "F_CYCLIST_INJURED\020\016\022\034\n\030NUMBER_OF_CYCLIST"
-    "_KILLED\020\017\022\036\n\032NUMBER_OF_MOTORIST_INJURED\020"
-    "\020\022\035\n\031NUMBER_OF_MOTORIST_KILLED\020\021\022!\n\035CONT"
-    "RIBUTING_FACTOR_VEHICLE_1\020\022\022!\n\035CONTRIBUT"
-    "ING_FACTOR_VEHICLE_2\020\023\022!\n\035CONTRIBUTING_F"
-    "ACTOR_VEHICLE_3\020\024\022!\n\035CONTRIBUTING_FACTOR"
-    "_VEHICLE_4\020\025\022!\n\035CONTRIBUTING_FACTOR_VEHI"
-    "CLE_5\020\026\022\020\n\014COLLISION_ID\020\027\022\027\n\023VEHICLE_TYP"
-    "E_CODE_1\020\030\022\027\n\023VEHICLE_TYPE_CODE_2\020\031\022\027\n\023V"
-    "EHICLE_TYPE_CODE_3\020\032\022\027\n\023VEHICLE_TYPE_COD"
-    "E_4\020\033\022\027\n\023VEHICLE_TYPE_CODE_5\020\0342>\n\014QueryS"
-    "ervice\022.\n\rGetCollisions\022\r.QueryRequest\032\016"
-    ".QueryResponseb\006proto3"
+    "\n\017collision.proto\022\017collision_proto\"\234\001\n\016Q"
+    "ueryCondition\022+\n\005field\030\001 \001(\0162\034.collision"
+    "_proto.QueryFields\022-\n\tcondition\030\002 \001(\0162\032."
+    "collision_proto.Condition\022\022\n\010str_data\030\003 "
+    "\001(\tH\000\022\022\n\010int_data\030\004 \001(\005H\000B\006\n\004data\"@\n\014Que"
+    "ryRequest\0220\n\007queries\030\001 \003(\0132\037.collision_p"
+    "roto.QueryCondition\"\341\006\n\tCollision\022\022\n\ncra"
+    "sh_date\030\001 \001(\t\022\022\n\ncrash_time\030\002 \001(\t\022\017\n\007bor"
+    "ough\030\003 \001(\t\022\020\n\010zip_code\030\004 \001(\r\022\020\n\010latitude"
+    "\030\005 \001(\002\022\021\n\tlongitude\030\006 \001(\002\022\020\n\010location\030\007 "
+    "\001(\t\022\026\n\016on_street_name\030\010 \001(\t\022\031\n\021cross_str"
+    "eet_name\030\t \001(\t\022\027\n\017off_street_name\030\n \001(\t\022"
+    "!\n\031number_of_persons_injured\030\013 \001(\r\022 \n\030nu"
+    "mber_of_persons_killed\030\014 \001(\r\022%\n\035number_o"
+    "f_pedestrians_injured\030\r \001(\r\022$\n\034number_of"
+    "_pedestrians_killed\030\016 \001(\r\022!\n\031number_of_c"
+    "yclist_injured\030\017 \001(\r\022 \n\030number_of_cyclis"
+    "t_killed\030\020 \001(\r\022\"\n\032number_of_motorist_inj"
+    "ured\030\021 \001(\r\022!\n\031number_of_motorist_killed\030"
+    "\022 \001(\r\022%\n\035contributing_factor_vehicle_1\030\023"
+    " \001(\t\022%\n\035contributing_factor_vehicle_2\030\024 "
+    "\001(\t\022%\n\035contributing_factor_vehicle_3\030\025 \001"
+    "(\t\022%\n\035contributing_factor_vehicle_4\030\026 \001("
+    "\t\022%\n\035contributing_factor_vehicle_5\030\027 \001(\t"
+    "\022\024\n\014collision_id\030\030 \001(\004\022\033\n\023vehicle_type_c"
+    "ode_1\030\031 \001(\t\022\033\n\023vehicle_type_code_2\030\032 \001(\t"
+    "\022\033\n\023vehicle_type_code_3\030\033 \001(\t\022\033\n\023vehicle"
+    "_type_code_4\030\034 \001(\t\022\033\n\023vehicle_type_code_"
+    "5\030\035 \001(\t\">\n\rQueryResponse\022-\n\tcollision\030\001 "
+    "\003(\0132\032.collision_proto.Collision*\'\n\tCondi"
+    "tion\022\n\n\006EQUALS\020\000\022\016\n\nNOT_EQUALS\020\001*\357\005\n\013Que"
+    "ryFields\022\016\n\nCRASH_DATE\020\000\022\016\n\nCRASH_TIME\020\001"
+    "\022\013\n\007BOROUGH\020\002\022\014\n\010ZIP_CODE\020\003\022\014\n\010LATITUDE\020"
+    "\004\022\r\n\tLONGITUDE\020\005\022\014\n\010LOCATION\020\006\022\022\n\016ON_STR"
+    "EET_NAME\020\007\022\025\n\021CROSS_STREET_NAME\020\010\022\023\n\017OFF"
+    "_STREET_NAME\020\t\022\035\n\031NUMBER_OF_PERSONS_INJU"
+    "RED\020\n\022\034\n\030NUMBER_OF_PERSONS_KILLED\020\013\022!\n\035N"
+    "UMBER_OF_PEDESTRIANS_INJURED\020\014\022 \n\034NUMBER"
+    "_OF_PEDESTRIANS_KILLED\020\r\022\035\n\031NUMBER_OF_CY"
+    "CLIST_INJURED\020\016\022\034\n\030NUMBER_OF_CYCLIST_KIL"
+    "LED\020\017\022\036\n\032NUMBER_OF_MOTORIST_INJURED\020\020\022\035\n"
+    "\031NUMBER_OF_MOTORIST_KILLED\020\021\022!\n\035CONTRIBU"
+    "TING_FACTOR_VEHICLE_1\020\022\022!\n\035CONTRIBUTING_"
+    "FACTOR_VEHICLE_2\020\023\022!\n\035CONTRIBUTING_FACTO"
+    "R_VEHICLE_3\020\024\022!\n\035CONTRIBUTING_FACTOR_VEH"
+    "ICLE_4\020\025\022!\n\035CONTRIBUTING_FACTOR_VEHICLE_"
+    "5\020\026\022\020\n\014COLLISION_ID\020\027\022\027\n\023VEHICLE_TYPE_CO"
+    "DE_1\020\030\022\027\n\023VEHICLE_TYPE_CODE_2\020\031\022\027\n\023VEHIC"
+    "LE_TYPE_CODE_3\020\032\022\027\n\023VEHICLE_TYPE_CODE_4\020"
+    "\033\022\027\n\023VEHICLE_TYPE_CODE_5\020\0342g\n\025CollisionQ"
+    "ueryService\022N\n\rGetCollisions\022\035.collision"
+    "_proto.QueryRequest\032\036.collision_proto.Qu"
+    "eryResponseb\006proto3"
 };
 static ::absl::once_flag descriptor_table_collision_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_collision_2eproto = {
     false,
     false,
-    1982,
+    2099,
     descriptor_table_protodef_collision_2eproto,
     "collision.proto",
     &descriptor_table_collision_2eproto_once,
@@ -323,6 +328,7 @@ PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_collision_2epr
     file_level_enum_descriptors_collision_2eproto,
     file_level_service_descriptors_collision_2eproto,
 };
+namespace collision_proto {
 const ::google::protobuf::EnumDescriptor* Condition_descriptor() {
   ::google::protobuf::internal::AssignDescriptors(&descriptor_table_collision_2eproto);
   return file_level_enum_descriptors_collision_2eproto[0];
@@ -346,17 +352,17 @@ bool QueryFields_IsValid(int value) {
 class QueryCondition::_Internal {
  public:
   static constexpr ::int32_t kOneofCaseOffset =
-      PROTOBUF_FIELD_OFFSET(::QueryCondition, _impl_._oneof_case_);
+      PROTOBUF_FIELD_OFFSET(::collision_proto::QueryCondition, _impl_._oneof_case_);
 };
 
 QueryCondition::QueryCondition(::google::protobuf::Arena* arena)
     : ::google::protobuf::Message(arena) {
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:QueryCondition)
+  // @@protoc_insertion_point(arena_constructor:collision_proto.QueryCondition)
 }
 inline PROTOBUF_NDEBUG_INLINE QueryCondition::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
-    const Impl_& from, const ::QueryCondition& from_msg)
+    const Impl_& from, const ::collision_proto::QueryCondition& from_msg)
       : data_{},
         _cached_size_{0},
         _oneof_case_{from._oneof_case_[0]} {}
@@ -388,7 +394,7 @@ QueryCondition::QueryCondition(
         break;
   }
 
-  // @@protoc_insertion_point(copy_constructor:QueryCondition)
+  // @@protoc_insertion_point(copy_constructor:collision_proto.QueryCondition)
 }
 inline PROTOBUF_NDEBUG_INLINE QueryCondition::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
@@ -407,7 +413,7 @@ inline void QueryCondition::SharedCtor(::_pb::Arena* arena) {
                sizeof(Impl_::condition_));
 }
 QueryCondition::~QueryCondition() {
-  // @@protoc_insertion_point(destructor:QueryCondition)
+  // @@protoc_insertion_point(destructor:collision_proto.QueryCondition)
   _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   SharedDtor();
 }
@@ -420,7 +426,7 @@ inline void QueryCondition::SharedDtor() {
 }
 
 void QueryCondition::clear_data() {
-// @@protoc_insertion_point(one_of_clear_start:QueryCondition)
+// @@protoc_insertion_point(one_of_clear_start:collision_proto.QueryCondition)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   switch (data_case()) {
     case kStrData: {
@@ -460,7 +466,7 @@ QueryCondition::GetClassData() const {
   return _data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<1, 4, 0, 31, 2> QueryCondition::_table_ = {
+const ::_pbi::TcParseTable<1, 4, 0, 47, 2> QueryCondition::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -475,22 +481,22 @@ const ::_pbi::TcParseTable<1, 4, 0, 31, 2> QueryCondition::_table_ = {
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::QueryCondition>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::collision_proto::QueryCondition>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // .Condition condition = 2;
+    // .collision_proto.Condition condition = 2;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(QueryCondition, _impl_.condition_), 63>(),
      {16, 63, 0, PROTOBUF_FIELD_OFFSET(QueryCondition, _impl_.condition_)}},
-    // .QueryFields field = 1;
+    // .collision_proto.QueryFields field = 1;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(QueryCondition, _impl_.field_), 63>(),
      {8, 63, 0, PROTOBUF_FIELD_OFFSET(QueryCondition, _impl_.field_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // .QueryFields field = 1;
+    // .collision_proto.QueryFields field = 1;
     {PROTOBUF_FIELD_OFFSET(QueryCondition, _impl_.field_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kOpenEnum)},
-    // .Condition condition = 2;
+    // .collision_proto.Condition condition = 2;
     {PROTOBUF_FIELD_OFFSET(QueryCondition, _impl_.condition_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kOpenEnum)},
     // string str_data = 3;
@@ -502,14 +508,14 @@ const ::_pbi::TcParseTable<1, 4, 0, 31, 2> QueryCondition::_table_ = {
   }},
   // no aux_entries
   {{
-    "\16\0\0\10\0\0\0\0"
-    "QueryCondition"
+    "\36\0\0\10\0\0\0\0"
+    "collision_proto.QueryCondition"
     "str_data"
   }},
 };
 
 PROTOBUF_NOINLINE void QueryCondition::Clear() {
-// @@protoc_insertion_point(message_clear_start:QueryCondition)
+// @@protoc_insertion_point(message_clear_start:collision_proto.QueryCondition)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -525,18 +531,18 @@ PROTOBUF_NOINLINE void QueryCondition::Clear() {
 ::uint8_t* QueryCondition::_InternalSerialize(
     ::uint8_t* target,
     ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:QueryCondition)
+  // @@protoc_insertion_point(serialize_to_array_start:collision_proto.QueryCondition)
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // .QueryFields field = 1;
+  // .collision_proto.QueryFields field = 1;
   if (this->_internal_field() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteEnumToArray(
         1, this->_internal_field(), target);
   }
 
-  // .Condition condition = 2;
+  // .collision_proto.Condition condition = 2;
   if (this->_internal_condition() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteEnumToArray(
@@ -547,7 +553,7 @@ PROTOBUF_NOINLINE void QueryCondition::Clear() {
     case kStrData: {
       const std::string& _s = this->_internal_str_data();
       ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "QueryCondition.str_data");
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "collision_proto.QueryCondition.str_data");
       target = stream->WriteStringMaybeAliased(3, _s, target);
       break;
     }
@@ -565,12 +571,12 @@ PROTOBUF_NOINLINE void QueryCondition::Clear() {
         ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
             _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:QueryCondition)
+  // @@protoc_insertion_point(serialize_to_array_end:collision_proto.QueryCondition)
   return target;
 }
 
 ::size_t QueryCondition::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:QueryCondition)
+// @@protoc_insertion_point(message_byte_size_start:collision_proto.QueryCondition)
   ::size_t total_size = 0;
 
   ::uint32_t cached_has_bits = 0;
@@ -578,13 +584,13 @@ PROTOBUF_NOINLINE void QueryCondition::Clear() {
   (void) cached_has_bits;
 
   ::_pbi::Prefetch5LinesFrom7Lines(reinterpret_cast<const void*>(this));
-  // .QueryFields field = 1;
+  // .collision_proto.QueryFields field = 1;
   if (this->_internal_field() != 0) {
     total_size += 1 +
                   ::_pbi::WireFormatLite::EnumSize(this->_internal_field());
   }
 
-  // .Condition condition = 2;
+  // .collision_proto.Condition condition = 2;
   if (this->_internal_condition() != 0) {
     total_size += 1 +
                   ::_pbi::WireFormatLite::EnumSize(this->_internal_condition());
@@ -615,7 +621,7 @@ void QueryCondition::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::
   auto* const _this = static_cast<QueryCondition*>(&to_msg);
   auto& from = static_cast<const QueryCondition&>(from_msg);
   ::google::protobuf::Arena* arena = _this->GetArena();
-  // @@protoc_insertion_point(class_specific_merge_from_start:QueryCondition)
+  // @@protoc_insertion_point(class_specific_merge_from_start:collision_proto.QueryCondition)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -656,7 +662,7 @@ void QueryCondition::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::
 }
 
 void QueryCondition::CopyFrom(const QueryCondition& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:QueryCondition)
+// @@protoc_insertion_point(class_specific_copy_from_start:collision_proto.QueryCondition)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -688,11 +694,11 @@ class QueryRequest::_Internal {
 QueryRequest::QueryRequest(::google::protobuf::Arena* arena)
     : ::google::protobuf::Message(arena) {
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:QueryRequest)
+  // @@protoc_insertion_point(arena_constructor:collision_proto.QueryRequest)
 }
 inline PROTOBUF_NDEBUG_INLINE QueryRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
-    const Impl_& from, const ::QueryRequest& from_msg)
+    const Impl_& from, const ::collision_proto::QueryRequest& from_msg)
       : queries_{visibility, arena, from.queries_},
         _cached_size_{0} {}
 
@@ -706,7 +712,7 @@ QueryRequest::QueryRequest(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
 
-  // @@protoc_insertion_point(copy_constructor:QueryRequest)
+  // @@protoc_insertion_point(copy_constructor:collision_proto.QueryRequest)
 }
 inline PROTOBUF_NDEBUG_INLINE QueryRequest::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
@@ -718,7 +724,7 @@ inline void QueryRequest::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
 }
 QueryRequest::~QueryRequest() {
-  // @@protoc_insertion_point(destructor:QueryRequest)
+  // @@protoc_insertion_point(destructor:collision_proto.QueryRequest)
   _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   SharedDtor();
 }
@@ -763,26 +769,26 @@ const ::_pbi::TcParseTable<0, 1, 1, 0, 2> QueryRequest::_table_ = {
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::QueryRequest>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::collision_proto::QueryRequest>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // repeated .QueryCondition queries = 1;
+    // repeated .collision_proto.QueryCondition queries = 1;
     {::_pbi::TcParser::FastMtR1,
      {10, 63, 0, PROTOBUF_FIELD_OFFSET(QueryRequest, _impl_.queries_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // repeated .QueryCondition queries = 1;
+    // repeated .collision_proto.QueryCondition queries = 1;
     {PROTOBUF_FIELD_OFFSET(QueryRequest, _impl_.queries_), 0, 0,
     (0 | ::_fl::kFcRepeated | ::_fl::kMessage | ::_fl::kTvTable)},
   }}, {{
-    {::_pbi::TcParser::GetTable<::QueryCondition>()},
+    {::_pbi::TcParser::GetTable<::collision_proto::QueryCondition>()},
   }}, {{
   }},
 };
 
 PROTOBUF_NOINLINE void QueryRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:QueryRequest)
+// @@protoc_insertion_point(message_clear_start:collision_proto.QueryRequest)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -795,11 +801,11 @@ PROTOBUF_NOINLINE void QueryRequest::Clear() {
 ::uint8_t* QueryRequest::_InternalSerialize(
     ::uint8_t* target,
     ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:QueryRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:collision_proto.QueryRequest)
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // repeated .QueryCondition queries = 1;
+  // repeated .collision_proto.QueryCondition queries = 1;
   for (unsigned i = 0, n = static_cast<unsigned>(
                            this->_internal_queries_size());
        i < n; i++) {
@@ -815,12 +821,12 @@ PROTOBUF_NOINLINE void QueryRequest::Clear() {
         ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
             _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:QueryRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:collision_proto.QueryRequest)
   return target;
 }
 
 ::size_t QueryRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:QueryRequest)
+// @@protoc_insertion_point(message_byte_size_start:collision_proto.QueryRequest)
   ::size_t total_size = 0;
 
   ::uint32_t cached_has_bits = 0;
@@ -828,7 +834,7 @@ PROTOBUF_NOINLINE void QueryRequest::Clear() {
   (void) cached_has_bits;
 
   ::_pbi::Prefetch5LinesFrom7Lines(reinterpret_cast<const void*>(this));
-  // repeated .QueryCondition queries = 1;
+  // repeated .collision_proto.QueryCondition queries = 1;
   total_size += 1UL * this->_internal_queries_size();
   for (const auto& msg : this->_internal_queries()) {
     total_size += ::google::protobuf::internal::WireFormatLite::MessageSize(msg);
@@ -840,7 +846,7 @@ PROTOBUF_NOINLINE void QueryRequest::Clear() {
 void QueryRequest::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
   auto* const _this = static_cast<QueryRequest*>(&to_msg);
   auto& from = static_cast<const QueryRequest&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:QueryRequest)
+  // @@protoc_insertion_point(class_specific_merge_from_start:collision_proto.QueryRequest)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -851,7 +857,7 @@ void QueryRequest::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::go
 }
 
 void QueryRequest::CopyFrom(const QueryRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:QueryRequest)
+// @@protoc_insertion_point(class_specific_copy_from_start:collision_proto.QueryRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -869,18 +875,18 @@ void QueryRequest::InternalSwap(QueryRequest* PROTOBUF_RESTRICT other) {
 }
 // ===================================================================
 
-class GRPCollision::_Internal {
+class Collision::_Internal {
  public:
 };
 
-GRPCollision::GRPCollision(::google::protobuf::Arena* arena)
+Collision::Collision(::google::protobuf::Arena* arena)
     : ::google::protobuf::Message(arena) {
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:GRPCollision)
+  // @@protoc_insertion_point(arena_constructor:collision_proto.Collision)
 }
-inline PROTOBUF_NDEBUG_INLINE GRPCollision::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE Collision::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
-    const Impl_& from, const ::GRPCollision& from_msg)
+    const Impl_& from, const ::collision_proto::Collision& from_msg)
       : crash_date_(arena, from.crash_date_),
         crash_time_(arena, from.crash_time_),
         borough_(arena, from.borough_),
@@ -900,11 +906,11 @@ inline PROTOBUF_NDEBUG_INLINE GRPCollision::Impl_::Impl_(
         vehicle_type_code_5_(arena, from.vehicle_type_code_5_),
         _cached_size_{0} {}
 
-GRPCollision::GRPCollision(
+Collision::Collision(
     ::google::protobuf::Arena* arena,
-    const GRPCollision& from)
+    const Collision& from)
     : ::google::protobuf::Message(arena) {
-  GRPCollision* const _this = this;
+  Collision* const _this = this;
   (void)_this;
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
@@ -917,9 +923,9 @@ GRPCollision::GRPCollision(
                offsetof(Impl_, zip_code_) +
                sizeof(Impl_::number_of_motorist_killed_));
 
-  // @@protoc_insertion_point(copy_constructor:GRPCollision)
+  // @@protoc_insertion_point(copy_constructor:collision_proto.Collision)
 }
-inline PROTOBUF_NDEBUG_INLINE GRPCollision::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE Collision::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
       : crash_date_(arena),
@@ -941,7 +947,7 @@ inline PROTOBUF_NDEBUG_INLINE GRPCollision::Impl_::Impl_(
         vehicle_type_code_5_(arena),
         _cached_size_{0} {}
 
-inline void GRPCollision::SharedCtor(::_pb::Arena* arena) {
+inline void Collision::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
   ::memset(reinterpret_cast<char *>(&_impl_) +
                offsetof(Impl_, zip_code_),
@@ -950,12 +956,12 @@ inline void GRPCollision::SharedCtor(::_pb::Arena* arena) {
                offsetof(Impl_, zip_code_) +
                sizeof(Impl_::number_of_motorist_killed_));
 }
-GRPCollision::~GRPCollision() {
-  // @@protoc_insertion_point(destructor:GRPCollision)
+Collision::~Collision() {
+  // @@protoc_insertion_point(destructor:collision_proto.Collision)
   _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   SharedDtor();
 }
-inline void GRPCollision::SharedDtor() {
+inline void Collision::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
   _impl_.crash_date_.Destroy();
   _impl_.crash_time_.Destroy();
@@ -978,18 +984,18 @@ inline void GRPCollision::SharedDtor() {
 }
 
 const ::google::protobuf::MessageLite::ClassData*
-GRPCollision::GetClassData() const {
+Collision::GetClassData() const {
   PROTOBUF_CONSTINIT static const ::google::protobuf::MessageLite::
       ClassDataFull _data_ = {
           {
               &_table_.header,
               nullptr,  // OnDemandRegisterArenaDtor
               nullptr,  // IsInitialized
-              PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_._cached_size_),
+              PROTOBUF_FIELD_OFFSET(Collision, _impl_._cached_size_),
               false,
           },
-          &GRPCollision::MergeImpl,
-          &GRPCollision::kDescriptorMethods,
+          &Collision::MergeImpl,
+          &Collision::kDescriptorMethods,
           &descriptor_table_collision_2eproto,
           nullptr,  // tracker
       };
@@ -998,7 +1004,7 @@ GRPCollision::GetClassData() const {
   return _data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<5, 29, 0, 366, 2> GRPCollision::_table_ = {
+const ::_pbi::TcParseTable<5, 29, 0, 379, 2> Collision::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -1009,198 +1015,198 @@ const ::_pbi::TcParseTable<5, 29, 0, 366, 2> GRPCollision::_table_ = {
     29,  // num_field_entries
     0,  // num_aux_entries
     offsetof(decltype(_table_), field_names),  // no aux_entries
-    &_GRPCollision_default_instance_._instance,
+    &_Collision_default_instance_._instance,
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::GRPCollision>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::collision_proto::Collision>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
     {::_pbi::TcParser::MiniParse, {}},
     // string crash_date = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.crash_date_)}},
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(Collision, _impl_.crash_date_)}},
     // string crash_time = 2;
     {::_pbi::TcParser::FastUS1,
-     {18, 63, 0, PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.crash_time_)}},
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(Collision, _impl_.crash_time_)}},
     // string borough = 3;
     {::_pbi::TcParser::FastUS1,
-     {26, 63, 0, PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.borough_)}},
+     {26, 63, 0, PROTOBUF_FIELD_OFFSET(Collision, _impl_.borough_)}},
     // uint32 zip_code = 4;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(GRPCollision, _impl_.zip_code_), 63>(),
-     {32, 63, 0, PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.zip_code_)}},
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(Collision, _impl_.zip_code_), 63>(),
+     {32, 63, 0, PROTOBUF_FIELD_OFFSET(Collision, _impl_.zip_code_)}},
     // float latitude = 5;
     {::_pbi::TcParser::FastF32S1,
-     {45, 63, 0, PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.latitude_)}},
+     {45, 63, 0, PROTOBUF_FIELD_OFFSET(Collision, _impl_.latitude_)}},
     // float longitude = 6;
     {::_pbi::TcParser::FastF32S1,
-     {53, 63, 0, PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.longitude_)}},
+     {53, 63, 0, PROTOBUF_FIELD_OFFSET(Collision, _impl_.longitude_)}},
     // string location = 7;
     {::_pbi::TcParser::FastUS1,
-     {58, 63, 0, PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.location_)}},
+     {58, 63, 0, PROTOBUF_FIELD_OFFSET(Collision, _impl_.location_)}},
     // string on_street_name = 8;
     {::_pbi::TcParser::FastUS1,
-     {66, 63, 0, PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.on_street_name_)}},
+     {66, 63, 0, PROTOBUF_FIELD_OFFSET(Collision, _impl_.on_street_name_)}},
     // string cross_street_name = 9;
     {::_pbi::TcParser::FastUS1,
-     {74, 63, 0, PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.cross_street_name_)}},
+     {74, 63, 0, PROTOBUF_FIELD_OFFSET(Collision, _impl_.cross_street_name_)}},
     // string off_street_name = 10;
     {::_pbi::TcParser::FastUS1,
-     {82, 63, 0, PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.off_street_name_)}},
+     {82, 63, 0, PROTOBUF_FIELD_OFFSET(Collision, _impl_.off_street_name_)}},
     // uint32 number_of_persons_injured = 11;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(GRPCollision, _impl_.number_of_persons_injured_), 63>(),
-     {88, 63, 0, PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.number_of_persons_injured_)}},
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(Collision, _impl_.number_of_persons_injured_), 63>(),
+     {88, 63, 0, PROTOBUF_FIELD_OFFSET(Collision, _impl_.number_of_persons_injured_)}},
     // uint32 number_of_persons_killed = 12;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(GRPCollision, _impl_.number_of_persons_killed_), 63>(),
-     {96, 63, 0, PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.number_of_persons_killed_)}},
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(Collision, _impl_.number_of_persons_killed_), 63>(),
+     {96, 63, 0, PROTOBUF_FIELD_OFFSET(Collision, _impl_.number_of_persons_killed_)}},
     // uint32 number_of_pedestrians_injured = 13;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(GRPCollision, _impl_.number_of_pedestrians_injured_), 63>(),
-     {104, 63, 0, PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.number_of_pedestrians_injured_)}},
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(Collision, _impl_.number_of_pedestrians_injured_), 63>(),
+     {104, 63, 0, PROTOBUF_FIELD_OFFSET(Collision, _impl_.number_of_pedestrians_injured_)}},
     // uint32 number_of_pedestrians_killed = 14;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(GRPCollision, _impl_.number_of_pedestrians_killed_), 63>(),
-     {112, 63, 0, PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.number_of_pedestrians_killed_)}},
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(Collision, _impl_.number_of_pedestrians_killed_), 63>(),
+     {112, 63, 0, PROTOBUF_FIELD_OFFSET(Collision, _impl_.number_of_pedestrians_killed_)}},
     // uint32 number_of_cyclist_injured = 15;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(GRPCollision, _impl_.number_of_cyclist_injured_), 63>(),
-     {120, 63, 0, PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.number_of_cyclist_injured_)}},
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(Collision, _impl_.number_of_cyclist_injured_), 63>(),
+     {120, 63, 0, PROTOBUF_FIELD_OFFSET(Collision, _impl_.number_of_cyclist_injured_)}},
     // uint32 number_of_cyclist_killed = 16;
     {::_pbi::TcParser::FastV32S2,
-     {384, 63, 0, PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.number_of_cyclist_killed_)}},
+     {384, 63, 0, PROTOBUF_FIELD_OFFSET(Collision, _impl_.number_of_cyclist_killed_)}},
     // uint32 number_of_motorist_injured = 17;
     {::_pbi::TcParser::FastV32S2,
-     {392, 63, 0, PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.number_of_motorist_injured_)}},
+     {392, 63, 0, PROTOBUF_FIELD_OFFSET(Collision, _impl_.number_of_motorist_injured_)}},
     // uint32 number_of_motorist_killed = 18;
     {::_pbi::TcParser::FastV32S2,
-     {400, 63, 0, PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.number_of_motorist_killed_)}},
+     {400, 63, 0, PROTOBUF_FIELD_OFFSET(Collision, _impl_.number_of_motorist_killed_)}},
     // string contributing_factor_vehicle_1 = 19;
     {::_pbi::TcParser::FastUS2,
-     {410, 63, 0, PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.contributing_factor_vehicle_1_)}},
+     {410, 63, 0, PROTOBUF_FIELD_OFFSET(Collision, _impl_.contributing_factor_vehicle_1_)}},
     // string contributing_factor_vehicle_2 = 20;
     {::_pbi::TcParser::FastUS2,
-     {418, 63, 0, PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.contributing_factor_vehicle_2_)}},
+     {418, 63, 0, PROTOBUF_FIELD_OFFSET(Collision, _impl_.contributing_factor_vehicle_2_)}},
     // string contributing_factor_vehicle_3 = 21;
     {::_pbi::TcParser::FastUS2,
-     {426, 63, 0, PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.contributing_factor_vehicle_3_)}},
+     {426, 63, 0, PROTOBUF_FIELD_OFFSET(Collision, _impl_.contributing_factor_vehicle_3_)}},
     // string contributing_factor_vehicle_4 = 22;
     {::_pbi::TcParser::FastUS2,
-     {434, 63, 0, PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.contributing_factor_vehicle_4_)}},
+     {434, 63, 0, PROTOBUF_FIELD_OFFSET(Collision, _impl_.contributing_factor_vehicle_4_)}},
     // string contributing_factor_vehicle_5 = 23;
     {::_pbi::TcParser::FastUS2,
-     {442, 63, 0, PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.contributing_factor_vehicle_5_)}},
+     {442, 63, 0, PROTOBUF_FIELD_OFFSET(Collision, _impl_.contributing_factor_vehicle_5_)}},
     // uint64 collision_id = 24;
     {::_pbi::TcParser::FastV64S2,
-     {448, 63, 0, PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.collision_id_)}},
+     {448, 63, 0, PROTOBUF_FIELD_OFFSET(Collision, _impl_.collision_id_)}},
     // string vehicle_type_code_1 = 25;
     {::_pbi::TcParser::FastUS2,
-     {458, 63, 0, PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.vehicle_type_code_1_)}},
+     {458, 63, 0, PROTOBUF_FIELD_OFFSET(Collision, _impl_.vehicle_type_code_1_)}},
     // string vehicle_type_code_2 = 26;
     {::_pbi::TcParser::FastUS2,
-     {466, 63, 0, PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.vehicle_type_code_2_)}},
+     {466, 63, 0, PROTOBUF_FIELD_OFFSET(Collision, _impl_.vehicle_type_code_2_)}},
     // string vehicle_type_code_3 = 27;
     {::_pbi::TcParser::FastUS2,
-     {474, 63, 0, PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.vehicle_type_code_3_)}},
+     {474, 63, 0, PROTOBUF_FIELD_OFFSET(Collision, _impl_.vehicle_type_code_3_)}},
     // string vehicle_type_code_4 = 28;
     {::_pbi::TcParser::FastUS2,
-     {482, 63, 0, PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.vehicle_type_code_4_)}},
+     {482, 63, 0, PROTOBUF_FIELD_OFFSET(Collision, _impl_.vehicle_type_code_4_)}},
     // string vehicle_type_code_5 = 29;
     {::_pbi::TcParser::FastUS2,
-     {490, 63, 0, PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.vehicle_type_code_5_)}},
+     {490, 63, 0, PROTOBUF_FIELD_OFFSET(Collision, _impl_.vehicle_type_code_5_)}},
     {::_pbi::TcParser::MiniParse, {}},
     {::_pbi::TcParser::MiniParse, {}},
   }}, {{
     65535, 65535
   }}, {{
     // string crash_date = 1;
-    {PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.crash_date_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Collision, _impl_.crash_date_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // string crash_time = 2;
-    {PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.crash_time_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Collision, _impl_.crash_time_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // string borough = 3;
-    {PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.borough_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Collision, _impl_.borough_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // uint32 zip_code = 4;
-    {PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.zip_code_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Collision, _impl_.zip_code_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUInt32)},
     // float latitude = 5;
-    {PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.latitude_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Collision, _impl_.latitude_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
     // float longitude = 6;
-    {PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.longitude_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Collision, _impl_.longitude_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
     // string location = 7;
-    {PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.location_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Collision, _impl_.location_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // string on_street_name = 8;
-    {PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.on_street_name_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Collision, _impl_.on_street_name_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // string cross_street_name = 9;
-    {PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.cross_street_name_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Collision, _impl_.cross_street_name_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // string off_street_name = 10;
-    {PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.off_street_name_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Collision, _impl_.off_street_name_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // uint32 number_of_persons_injured = 11;
-    {PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.number_of_persons_injured_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Collision, _impl_.number_of_persons_injured_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUInt32)},
     // uint32 number_of_persons_killed = 12;
-    {PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.number_of_persons_killed_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Collision, _impl_.number_of_persons_killed_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUInt32)},
     // uint32 number_of_pedestrians_injured = 13;
-    {PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.number_of_pedestrians_injured_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Collision, _impl_.number_of_pedestrians_injured_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUInt32)},
     // uint32 number_of_pedestrians_killed = 14;
-    {PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.number_of_pedestrians_killed_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Collision, _impl_.number_of_pedestrians_killed_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUInt32)},
     // uint32 number_of_cyclist_injured = 15;
-    {PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.number_of_cyclist_injured_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Collision, _impl_.number_of_cyclist_injured_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUInt32)},
     // uint32 number_of_cyclist_killed = 16;
-    {PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.number_of_cyclist_killed_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Collision, _impl_.number_of_cyclist_killed_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUInt32)},
     // uint32 number_of_motorist_injured = 17;
-    {PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.number_of_motorist_injured_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Collision, _impl_.number_of_motorist_injured_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUInt32)},
     // uint32 number_of_motorist_killed = 18;
-    {PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.number_of_motorist_killed_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Collision, _impl_.number_of_motorist_killed_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUInt32)},
     // string contributing_factor_vehicle_1 = 19;
-    {PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.contributing_factor_vehicle_1_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Collision, _impl_.contributing_factor_vehicle_1_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // string contributing_factor_vehicle_2 = 20;
-    {PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.contributing_factor_vehicle_2_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Collision, _impl_.contributing_factor_vehicle_2_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // string contributing_factor_vehicle_3 = 21;
-    {PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.contributing_factor_vehicle_3_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Collision, _impl_.contributing_factor_vehicle_3_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // string contributing_factor_vehicle_4 = 22;
-    {PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.contributing_factor_vehicle_4_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Collision, _impl_.contributing_factor_vehicle_4_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // string contributing_factor_vehicle_5 = 23;
-    {PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.contributing_factor_vehicle_5_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Collision, _impl_.contributing_factor_vehicle_5_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // uint64 collision_id = 24;
-    {PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.collision_id_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Collision, _impl_.collision_id_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUInt64)},
     // string vehicle_type_code_1 = 25;
-    {PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.vehicle_type_code_1_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Collision, _impl_.vehicle_type_code_1_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // string vehicle_type_code_2 = 26;
-    {PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.vehicle_type_code_2_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Collision, _impl_.vehicle_type_code_2_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // string vehicle_type_code_3 = 27;
-    {PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.vehicle_type_code_3_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Collision, _impl_.vehicle_type_code_3_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // string vehicle_type_code_4 = 28;
-    {PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.vehicle_type_code_4_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Collision, _impl_.vehicle_type_code_4_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // string vehicle_type_code_5 = 29;
-    {PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.vehicle_type_code_5_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Collision, _impl_.vehicle_type_code_5_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
   // no aux_entries
   {{
-    "\14\12\12\7\0\0\0\10\16\21\17\0\0\0\0\0\0\0\0\35\35\35\35\35\0\23\23\23\23\23\0\0"
-    "GRPCollision"
+    "\31\12\12\7\0\0\0\10\16\21\17\0\0\0\0\0\0\0\0\35\35\35\35\35\0\23\23\23\23\23\0\0"
+    "collision_proto.Collision"
     "crash_date"
     "crash_time"
     "borough"
@@ -1221,8 +1227,8 @@ const ::_pbi::TcParseTable<5, 29, 0, 366, 2> GRPCollision::_table_ = {
   }},
 };
 
-PROTOBUF_NOINLINE void GRPCollision::Clear() {
-// @@protoc_insertion_point(message_clear_start:GRPCollision)
+PROTOBUF_NOINLINE void Collision::Clear() {
+// @@protoc_insertion_point(message_clear_start:collision_proto.Collision)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -1251,10 +1257,10 @@ PROTOBUF_NOINLINE void GRPCollision::Clear() {
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
-::uint8_t* GRPCollision::_InternalSerialize(
+::uint8_t* Collision::_InternalSerialize(
     ::uint8_t* target,
     ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:GRPCollision)
+  // @@protoc_insertion_point(serialize_to_array_start:collision_proto.Collision)
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
@@ -1262,7 +1268,7 @@ PROTOBUF_NOINLINE void GRPCollision::Clear() {
   if (!this->_internal_crash_date().empty()) {
     const std::string& _s = this->_internal_crash_date();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "GRPCollision.crash_date");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "collision_proto.Collision.crash_date");
     target = stream->WriteStringMaybeAliased(1, _s, target);
   }
 
@@ -1270,7 +1276,7 @@ PROTOBUF_NOINLINE void GRPCollision::Clear() {
   if (!this->_internal_crash_time().empty()) {
     const std::string& _s = this->_internal_crash_time();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "GRPCollision.crash_time");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "collision_proto.Collision.crash_time");
     target = stream->WriteStringMaybeAliased(2, _s, target);
   }
 
@@ -1278,7 +1284,7 @@ PROTOBUF_NOINLINE void GRPCollision::Clear() {
   if (!this->_internal_borough().empty()) {
     const std::string& _s = this->_internal_borough();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "GRPCollision.borough");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "collision_proto.Collision.borough");
     target = stream->WriteStringMaybeAliased(3, _s, target);
   }
 
@@ -1317,7 +1323,7 @@ PROTOBUF_NOINLINE void GRPCollision::Clear() {
   if (!this->_internal_location().empty()) {
     const std::string& _s = this->_internal_location();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "GRPCollision.location");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "collision_proto.Collision.location");
     target = stream->WriteStringMaybeAliased(7, _s, target);
   }
 
@@ -1325,7 +1331,7 @@ PROTOBUF_NOINLINE void GRPCollision::Clear() {
   if (!this->_internal_on_street_name().empty()) {
     const std::string& _s = this->_internal_on_street_name();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "GRPCollision.on_street_name");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "collision_proto.Collision.on_street_name");
     target = stream->WriteStringMaybeAliased(8, _s, target);
   }
 
@@ -1333,7 +1339,7 @@ PROTOBUF_NOINLINE void GRPCollision::Clear() {
   if (!this->_internal_cross_street_name().empty()) {
     const std::string& _s = this->_internal_cross_street_name();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "GRPCollision.cross_street_name");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "collision_proto.Collision.cross_street_name");
     target = stream->WriteStringMaybeAliased(9, _s, target);
   }
 
@@ -1341,7 +1347,7 @@ PROTOBUF_NOINLINE void GRPCollision::Clear() {
   if (!this->_internal_off_street_name().empty()) {
     const std::string& _s = this->_internal_off_street_name();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "GRPCollision.off_street_name");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "collision_proto.Collision.off_street_name");
     target = stream->WriteStringMaybeAliased(10, _s, target);
   }
 
@@ -1405,7 +1411,7 @@ PROTOBUF_NOINLINE void GRPCollision::Clear() {
   if (!this->_internal_contributing_factor_vehicle_1().empty()) {
     const std::string& _s = this->_internal_contributing_factor_vehicle_1();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "GRPCollision.contributing_factor_vehicle_1");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "collision_proto.Collision.contributing_factor_vehicle_1");
     target = stream->WriteStringMaybeAliased(19, _s, target);
   }
 
@@ -1413,7 +1419,7 @@ PROTOBUF_NOINLINE void GRPCollision::Clear() {
   if (!this->_internal_contributing_factor_vehicle_2().empty()) {
     const std::string& _s = this->_internal_contributing_factor_vehicle_2();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "GRPCollision.contributing_factor_vehicle_2");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "collision_proto.Collision.contributing_factor_vehicle_2");
     target = stream->WriteStringMaybeAliased(20, _s, target);
   }
 
@@ -1421,7 +1427,7 @@ PROTOBUF_NOINLINE void GRPCollision::Clear() {
   if (!this->_internal_contributing_factor_vehicle_3().empty()) {
     const std::string& _s = this->_internal_contributing_factor_vehicle_3();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "GRPCollision.contributing_factor_vehicle_3");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "collision_proto.Collision.contributing_factor_vehicle_3");
     target = stream->WriteStringMaybeAliased(21, _s, target);
   }
 
@@ -1429,7 +1435,7 @@ PROTOBUF_NOINLINE void GRPCollision::Clear() {
   if (!this->_internal_contributing_factor_vehicle_4().empty()) {
     const std::string& _s = this->_internal_contributing_factor_vehicle_4();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "GRPCollision.contributing_factor_vehicle_4");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "collision_proto.Collision.contributing_factor_vehicle_4");
     target = stream->WriteStringMaybeAliased(22, _s, target);
   }
 
@@ -1437,7 +1443,7 @@ PROTOBUF_NOINLINE void GRPCollision::Clear() {
   if (!this->_internal_contributing_factor_vehicle_5().empty()) {
     const std::string& _s = this->_internal_contributing_factor_vehicle_5();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "GRPCollision.contributing_factor_vehicle_5");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "collision_proto.Collision.contributing_factor_vehicle_5");
     target = stream->WriteStringMaybeAliased(23, _s, target);
   }
 
@@ -1452,7 +1458,7 @@ PROTOBUF_NOINLINE void GRPCollision::Clear() {
   if (!this->_internal_vehicle_type_code_1().empty()) {
     const std::string& _s = this->_internal_vehicle_type_code_1();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "GRPCollision.vehicle_type_code_1");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "collision_proto.Collision.vehicle_type_code_1");
     target = stream->WriteStringMaybeAliased(25, _s, target);
   }
 
@@ -1460,7 +1466,7 @@ PROTOBUF_NOINLINE void GRPCollision::Clear() {
   if (!this->_internal_vehicle_type_code_2().empty()) {
     const std::string& _s = this->_internal_vehicle_type_code_2();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "GRPCollision.vehicle_type_code_2");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "collision_proto.Collision.vehicle_type_code_2");
     target = stream->WriteStringMaybeAliased(26, _s, target);
   }
 
@@ -1468,7 +1474,7 @@ PROTOBUF_NOINLINE void GRPCollision::Clear() {
   if (!this->_internal_vehicle_type_code_3().empty()) {
     const std::string& _s = this->_internal_vehicle_type_code_3();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "GRPCollision.vehicle_type_code_3");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "collision_proto.Collision.vehicle_type_code_3");
     target = stream->WriteStringMaybeAliased(27, _s, target);
   }
 
@@ -1476,7 +1482,7 @@ PROTOBUF_NOINLINE void GRPCollision::Clear() {
   if (!this->_internal_vehicle_type_code_4().empty()) {
     const std::string& _s = this->_internal_vehicle_type_code_4();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "GRPCollision.vehicle_type_code_4");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "collision_proto.Collision.vehicle_type_code_4");
     target = stream->WriteStringMaybeAliased(28, _s, target);
   }
 
@@ -1484,7 +1490,7 @@ PROTOBUF_NOINLINE void GRPCollision::Clear() {
   if (!this->_internal_vehicle_type_code_5().empty()) {
     const std::string& _s = this->_internal_vehicle_type_code_5();
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "GRPCollision.vehicle_type_code_5");
+        _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "collision_proto.Collision.vehicle_type_code_5");
     target = stream->WriteStringMaybeAliased(29, _s, target);
   }
 
@@ -1493,12 +1499,12 @@ PROTOBUF_NOINLINE void GRPCollision::Clear() {
         ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
             _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:GRPCollision)
+  // @@protoc_insertion_point(serialize_to_array_end:collision_proto.Collision)
   return target;
 }
 
-::size_t GRPCollision::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:GRPCollision)
+::size_t Collision::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:collision_proto.Collision)
   ::size_t total_size = 0;
 
   ::uint32_t cached_has_bits = 0;
@@ -1692,10 +1698,10 @@ PROTOBUF_NOINLINE void GRPCollision::Clear() {
 }
 
 
-void GRPCollision::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<GRPCollision*>(&to_msg);
-  auto& from = static_cast<const GRPCollision&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:GRPCollision)
+void Collision::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<Collision*>(&to_msg);
+  auto& from = static_cast<const Collision&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:collision_proto.Collision)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1800,15 +1806,15 @@ void GRPCollision::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::go
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void GRPCollision::CopyFrom(const GRPCollision& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:GRPCollision)
+void Collision::CopyFrom(const Collision& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:collision_proto.Collision)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 
-void GRPCollision::InternalSwap(GRPCollision* PROTOBUF_RESTRICT other) {
+void Collision::InternalSwap(Collision* PROTOBUF_RESTRICT other) {
   using std::swap;
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
@@ -1831,14 +1837,14 @@ void GRPCollision::InternalSwap(GRPCollision* PROTOBUF_RESTRICT other) {
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.vehicle_type_code_4_, &other->_impl_.vehicle_type_code_4_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.vehicle_type_code_5_, &other->_impl_.vehicle_type_code_5_, arena);
   ::google::protobuf::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.number_of_motorist_killed_)
-      + sizeof(GRPCollision::_impl_.number_of_motorist_killed_)
-      - PROTOBUF_FIELD_OFFSET(GRPCollision, _impl_.zip_code_)>(
+      PROTOBUF_FIELD_OFFSET(Collision, _impl_.number_of_motorist_killed_)
+      + sizeof(Collision::_impl_.number_of_motorist_killed_)
+      - PROTOBUF_FIELD_OFFSET(Collision, _impl_.zip_code_)>(
           reinterpret_cast<char*>(&_impl_.zip_code_),
           reinterpret_cast<char*>(&other->_impl_.zip_code_));
 }
 
-::google::protobuf::Metadata GRPCollision::GetMetadata() const {
+::google::protobuf::Metadata Collision::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
@@ -1850,11 +1856,11 @@ class QueryResponse::_Internal {
 QueryResponse::QueryResponse(::google::protobuf::Arena* arena)
     : ::google::protobuf::Message(arena) {
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:QueryResponse)
+  // @@protoc_insertion_point(arena_constructor:collision_proto.QueryResponse)
 }
 inline PROTOBUF_NDEBUG_INLINE QueryResponse::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
-    const Impl_& from, const ::QueryResponse& from_msg)
+    const Impl_& from, const ::collision_proto::QueryResponse& from_msg)
       : collision_{visibility, arena, from.collision_},
         _cached_size_{0} {}
 
@@ -1868,7 +1874,7 @@ QueryResponse::QueryResponse(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
 
-  // @@protoc_insertion_point(copy_constructor:QueryResponse)
+  // @@protoc_insertion_point(copy_constructor:collision_proto.QueryResponse)
 }
 inline PROTOBUF_NDEBUG_INLINE QueryResponse::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
@@ -1880,7 +1886,7 @@ inline void QueryResponse::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
 }
 QueryResponse::~QueryResponse() {
-  // @@protoc_insertion_point(destructor:QueryResponse)
+  // @@protoc_insertion_point(destructor:collision_proto.QueryResponse)
   _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   SharedDtor();
 }
@@ -1925,26 +1931,26 @@ const ::_pbi::TcParseTable<0, 1, 1, 0, 2> QueryResponse::_table_ = {
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::QueryResponse>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::collision_proto::QueryResponse>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // repeated .GRPCollision collision = 1;
+    // repeated .collision_proto.Collision collision = 1;
     {::_pbi::TcParser::FastMtR1,
      {10, 63, 0, PROTOBUF_FIELD_OFFSET(QueryResponse, _impl_.collision_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // repeated .GRPCollision collision = 1;
+    // repeated .collision_proto.Collision collision = 1;
     {PROTOBUF_FIELD_OFFSET(QueryResponse, _impl_.collision_), 0, 0,
     (0 | ::_fl::kFcRepeated | ::_fl::kMessage | ::_fl::kTvTable)},
   }}, {{
-    {::_pbi::TcParser::GetTable<::GRPCollision>()},
+    {::_pbi::TcParser::GetTable<::collision_proto::Collision>()},
   }}, {{
   }},
 };
 
 PROTOBUF_NOINLINE void QueryResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:QueryResponse)
+// @@protoc_insertion_point(message_clear_start:collision_proto.QueryResponse)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -1957,11 +1963,11 @@ PROTOBUF_NOINLINE void QueryResponse::Clear() {
 ::uint8_t* QueryResponse::_InternalSerialize(
     ::uint8_t* target,
     ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:QueryResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:collision_proto.QueryResponse)
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // repeated .GRPCollision collision = 1;
+  // repeated .collision_proto.Collision collision = 1;
   for (unsigned i = 0, n = static_cast<unsigned>(
                            this->_internal_collision_size());
        i < n; i++) {
@@ -1977,12 +1983,12 @@ PROTOBUF_NOINLINE void QueryResponse::Clear() {
         ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
             _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:QueryResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:collision_proto.QueryResponse)
   return target;
 }
 
 ::size_t QueryResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:QueryResponse)
+// @@protoc_insertion_point(message_byte_size_start:collision_proto.QueryResponse)
   ::size_t total_size = 0;
 
   ::uint32_t cached_has_bits = 0;
@@ -1990,7 +1996,7 @@ PROTOBUF_NOINLINE void QueryResponse::Clear() {
   (void) cached_has_bits;
 
   ::_pbi::Prefetch5LinesFrom7Lines(reinterpret_cast<const void*>(this));
-  // repeated .GRPCollision collision = 1;
+  // repeated .collision_proto.Collision collision = 1;
   total_size += 1UL * this->_internal_collision_size();
   for (const auto& msg : this->_internal_collision()) {
     total_size += ::google::protobuf::internal::WireFormatLite::MessageSize(msg);
@@ -2002,7 +2008,7 @@ PROTOBUF_NOINLINE void QueryResponse::Clear() {
 void QueryResponse::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
   auto* const _this = static_cast<QueryResponse*>(&to_msg);
   auto& from = static_cast<const QueryResponse&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:QueryResponse)
+  // @@protoc_insertion_point(class_specific_merge_from_start:collision_proto.QueryResponse)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2013,7 +2019,7 @@ void QueryResponse::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::g
 }
 
 void QueryResponse::CopyFrom(const QueryResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:QueryResponse)
+// @@protoc_insertion_point(class_specific_copy_from_start:collision_proto.QueryResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2030,6 +2036,7 @@ void QueryResponse::InternalSwap(QueryResponse* PROTOBUF_RESTRICT other) {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // @@protoc_insertion_point(namespace_scope)
+}  // namespace collision_proto
 namespace google {
 namespace protobuf {
 }  // namespace protobuf

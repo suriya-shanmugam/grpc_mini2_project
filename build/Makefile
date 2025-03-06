@@ -237,17 +237,17 @@ collision_parser_benchmark/fast:
 .PHONY : collision_parser_benchmark/fast
 
 #=============================================================================
-# Target rules for targets named pm_grpc_proto
+# Target rules for targets named cm_grpc_proto
 
 # Build rule for target.
-pm_grpc_proto: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pm_grpc_proto
-.PHONY : pm_grpc_proto
+cm_grpc_proto: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cm_grpc_proto
+.PHONY : cm_grpc_proto
 
 # fast build rule for target.
-pm_grpc_proto/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pm_grpc_proto.dir/build.make CMakeFiles/pm_grpc_proto.dir/build
-.PHONY : pm_grpc_proto/fast
+cm_grpc_proto/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cm_grpc_proto.dir/build.make CMakeFiles/cm_grpc_proto.dir/build
+.PHONY : cm_grpc_proto/fast
 
 #=============================================================================
 # Target rules for targets named server
@@ -406,7 +406,7 @@ collision.grpc.pb.o: collision.grpc.pb.cc.o
 
 # target to build an object file
 collision.grpc.pb.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pm_grpc_proto.dir/build.make CMakeFiles/pm_grpc_proto.dir/collision.grpc.pb.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cm_grpc_proto.dir/build.make CMakeFiles/cm_grpc_proto.dir/collision.grpc.pb.cc.o
 .PHONY : collision.grpc.pb.cc.o
 
 collision.grpc.pb.i: collision.grpc.pb.cc.i
@@ -414,7 +414,7 @@ collision.grpc.pb.i: collision.grpc.pb.cc.i
 
 # target to preprocess a source file
 collision.grpc.pb.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pm_grpc_proto.dir/build.make CMakeFiles/pm_grpc_proto.dir/collision.grpc.pb.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cm_grpc_proto.dir/build.make CMakeFiles/cm_grpc_proto.dir/collision.grpc.pb.cc.i
 .PHONY : collision.grpc.pb.cc.i
 
 collision.grpc.pb.s: collision.grpc.pb.cc.s
@@ -422,7 +422,7 @@ collision.grpc.pb.s: collision.grpc.pb.cc.s
 
 # target to generate assembly for a file
 collision.grpc.pb.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pm_grpc_proto.dir/build.make CMakeFiles/pm_grpc_proto.dir/collision.grpc.pb.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cm_grpc_proto.dir/build.make CMakeFiles/cm_grpc_proto.dir/collision.grpc.pb.cc.s
 .PHONY : collision.grpc.pb.cc.s
 
 collision.pb.o: collision.pb.cc.o
@@ -430,7 +430,7 @@ collision.pb.o: collision.pb.cc.o
 
 # target to build an object file
 collision.pb.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pm_grpc_proto.dir/build.make CMakeFiles/pm_grpc_proto.dir/collision.pb.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cm_grpc_proto.dir/build.make CMakeFiles/cm_grpc_proto.dir/collision.pb.cc.o
 .PHONY : collision.pb.cc.o
 
 collision.pb.i: collision.pb.cc.i
@@ -438,7 +438,7 @@ collision.pb.i: collision.pb.cc.i
 
 # target to preprocess a source file
 collision.pb.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pm_grpc_proto.dir/build.make CMakeFiles/pm_grpc_proto.dir/collision.pb.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cm_grpc_proto.dir/build.make CMakeFiles/cm_grpc_proto.dir/collision.pb.cc.i
 .PHONY : collision.pb.cc.i
 
 collision.pb.s: collision.pb.cc.s
@@ -446,7 +446,7 @@ collision.pb.s: collision.pb.cc.s
 
 # target to generate assembly for a file
 collision.pb.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pm_grpc_proto.dir/build.make CMakeFiles/pm_grpc_proto.dir/collision.pb.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cm_grpc_proto.dir/build.make CMakeFiles/cm_grpc_proto.dir/collision.pb.cc.s
 .PHONY : collision.pb.cc.s
 
 collision_manager.o: collision_manager.cpp.o
@@ -657,6 +657,7 @@ help:
 	@echo "... benchmark"
 	@echo "... benchmark_main"
 	@echo "... client"
+	@echo "... cm_grpc_proto"
 	@echo "... collision_manager"
 	@echo "... collision_manager_benchmark"
 	@echo "... collision_manager_test"
@@ -666,7 +667,6 @@ help:
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... main"
-	@echo "... pm_grpc_proto"
 	@echo "... server"
 	@echo "... client.o"
 	@echo "... client.i"

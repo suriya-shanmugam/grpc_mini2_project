@@ -3,7 +3,7 @@
 /home/suriya-018231499/sem2/cmpe273/mini2/collisionproject/275_mini1/temp2/build/CMakeFiles/collision_manager_test.dir
 /home/suriya-018231499/sem2/cmpe273/mini2/collisionproject/275_mini1/temp2/build/CMakeFiles/collision_manager_benchmark.dir
 /home/suriya-018231499/sem2/cmpe273/mini2/collisionproject/275_mini1/temp2/build/CMakeFiles/collision_parser_benchmark.dir
-/home/suriya-018231499/sem2/cmpe273/mini2/collisionproject/275_mini1/temp2/build/CMakeFiles/pm_grpc_proto.dir
+/home/suriya-018231499/sem2/cmpe273/mini2/collisionproject/275_mini1/temp2/build/CMakeFiles/cm_grpc_proto.dir
 /home/suriya-018231499/sem2/cmpe273/mini2/collisionproject/275_mini1/temp2/build/CMakeFiles/server.dir
 /home/suriya-018231499/sem2/cmpe273/mini2/collisionproject/275_mini1/temp2/build/CMakeFiles/client.dir
 /home/suriya-018231499/sem2/cmpe273/mini2/collisionproject/275_mini1/temp2/build/CMakeFiles/test.dir

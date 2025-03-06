@@ -1,5 +1,6 @@
 syntax = "proto3";
 
+package collision_proto;
 
 enum Condition {
     EQUALS = 0;
@@ -55,7 +56,7 @@ message QueryRequest {
     repeated QueryCondition queries = 1;
 }
 
-message GRPCollision {
+message Collision {
     string crash_date = 1; 
     string crash_time = 2; 
     string borough = 3; 
@@ -88,9 +89,9 @@ message GRPCollision {
 }
 
 message QueryResponse {
-    repeated GRPCollision collision = 1;
+    repeated Collision collision = 1;
 }
 
-service QueryService {
+service CollisionQueryService {
     rpc GetCollisions (QueryRequest) returns (QueryResponse);
 }

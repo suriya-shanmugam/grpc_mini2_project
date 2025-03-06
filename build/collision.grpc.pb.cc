@@ -19,65 +19,68 @@
 #include <grpcpp/server_context.h>
 #include <grpcpp/impl/service_type.h>
 #include <grpcpp/support/sync_stream.h>
+namespace collision_proto {
 
-static const char* QueryService_method_names[] = {
-  "/QueryService/GetCollisions",
+static const char* CollisionQueryService_method_names[] = {
+  "/collision_proto.CollisionQueryService/GetCollisions",
 };
 
-std::unique_ptr< QueryService::Stub> QueryService::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
+std::unique_ptr< CollisionQueryService::Stub> CollisionQueryService::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
   (void)options;
-  std::unique_ptr< QueryService::Stub> stub(new QueryService::Stub(channel, options));
+  std::unique_ptr< CollisionQueryService::Stub> stub(new CollisionQueryService::Stub(channel, options));
   return stub;
 }
 
-QueryService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)
-  : channel_(channel), rpcmethod_GetCollisions_(QueryService_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+CollisionQueryService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)
+  : channel_(channel), rpcmethod_GetCollisions_(CollisionQueryService_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
-::grpc::Status QueryService::Stub::GetCollisions(::grpc::ClientContext* context, const ::QueryRequest& request, ::QueryResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::QueryRequest, ::QueryResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetCollisions_, context, request, response);
+::grpc::Status CollisionQueryService::Stub::GetCollisions(::grpc::ClientContext* context, const ::collision_proto::QueryRequest& request, ::collision_proto::QueryResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::collision_proto::QueryRequest, ::collision_proto::QueryResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_GetCollisions_, context, request, response);
 }
 
-void QueryService::Stub::async::GetCollisions(::grpc::ClientContext* context, const ::QueryRequest* request, ::QueryResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::QueryRequest, ::QueryResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetCollisions_, context, request, response, std::move(f));
+void CollisionQueryService::Stub::async::GetCollisions(::grpc::ClientContext* context, const ::collision_proto::QueryRequest* request, ::collision_proto::QueryResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::collision_proto::QueryRequest, ::collision_proto::QueryResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetCollisions_, context, request, response, std::move(f));
 }
 
-void QueryService::Stub::async::GetCollisions(::grpc::ClientContext* context, const ::QueryRequest* request, ::QueryResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+void CollisionQueryService::Stub::async::GetCollisions(::grpc::ClientContext* context, const ::collision_proto::QueryRequest* request, ::collision_proto::QueryResponse* response, ::grpc::ClientUnaryReactor* reactor) {
   ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_GetCollisions_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::QueryResponse>* QueryService::Stub::PrepareAsyncGetCollisionsRaw(::grpc::ClientContext* context, const ::QueryRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::QueryResponse, ::QueryRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetCollisions_, context, request);
+::grpc::ClientAsyncResponseReader< ::collision_proto::QueryResponse>* CollisionQueryService::Stub::PrepareAsyncGetCollisionsRaw(::grpc::ClientContext* context, const ::collision_proto::QueryRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::collision_proto::QueryResponse, ::collision_proto::QueryRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_GetCollisions_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::QueryResponse>* QueryService::Stub::AsyncGetCollisionsRaw(::grpc::ClientContext* context, const ::QueryRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::collision_proto::QueryResponse>* CollisionQueryService::Stub::AsyncGetCollisionsRaw(::grpc::ClientContext* context, const ::collision_proto::QueryRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
     this->PrepareAsyncGetCollisionsRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-QueryService::Service::Service() {
+CollisionQueryService::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      QueryService_method_names[0],
+      CollisionQueryService_method_names[0],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< QueryService::Service, ::QueryRequest, ::QueryResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
-          [](QueryService::Service* service,
+      new ::grpc::internal::RpcMethodHandler< CollisionQueryService::Service, ::collision_proto::QueryRequest, ::collision_proto::QueryResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+          [](CollisionQueryService::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::QueryRequest* req,
-             ::QueryResponse* resp) {
+             const ::collision_proto::QueryRequest* req,
+             ::collision_proto::QueryResponse* resp) {
                return service->GetCollisions(ctx, req, resp);
              }, this)));
 }
 
-QueryService::Service::~Service() {
+CollisionQueryService::Service::~Service() {
 }
 
-::grpc::Status QueryService::Service::GetCollisions(::grpc::ServerContext* context, const ::QueryRequest* request, ::QueryResponse* response) {
+::grpc::Status CollisionQueryService::Service::GetCollisions(::grpc::ServerContext* context, const ::collision_proto::QueryRequest* request, ::collision_proto::QueryResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
+
+}  // namespace collision_proto
 

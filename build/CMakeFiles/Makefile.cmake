@@ -132,7 +132,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/collision_manager_test.dir/DependInfo.cmake"
   "CMakeFiles/collision_manager_benchmark.dir/DependInfo.cmake"
   "CMakeFiles/collision_parser_benchmark.dir/DependInfo.cmake"
-  "CMakeFiles/pm_grpc_proto.dir/DependInfo.cmake"
+  "CMakeFiles/cm_grpc_proto.dir/DependInfo.cmake"
   "CMakeFiles/server.dir/DependInfo.cmake"
   "CMakeFiles/client.dir/DependInfo.cmake"
   "_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"

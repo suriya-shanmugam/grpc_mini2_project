@@ -92,7 +92,7 @@ client_EXTERNAL_OBJECTS =
 
 client: CMakeFiles/client.dir/client.cpp.o
 client: CMakeFiles/client.dir/build.make
-client: libpm_grpc_proto.a
+client: libcm_grpc_proto.a
 client: /usr/local/lib/libabsl_flags_parse.a
 client: libcollision_manager.a
 client: /usr/local/lib/libgrpc++_reflection.a

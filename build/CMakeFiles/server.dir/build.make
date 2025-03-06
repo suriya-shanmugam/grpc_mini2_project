@@ -92,7 +92,7 @@ server_EXTERNAL_OBJECTS =
 
 server: CMakeFiles/server.dir/server.cpp.o
 server: CMakeFiles/server.dir/build.make
-server: libpm_grpc_proto.a
+server: libcm_grpc_proto.a
 server: /usr/local/lib/libabsl_flags_parse.a
 server: libcollision_manager.a
 server: /usr/local/lib/libgrpc++_reflection.a

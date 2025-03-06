@@ -50,9 +50,10 @@ struct TableStruct_collision_2eproto {
 };
 extern const ::google::protobuf::internal::DescriptorTable
     descriptor_table_collision_2eproto;
-class GRPCollision;
-struct GRPCollisionDefaultTypeInternal;
-extern GRPCollisionDefaultTypeInternal _GRPCollision_default_instance_;
+namespace collision_proto {
+class Collision;
+struct CollisionDefaultTypeInternal;
+extern CollisionDefaultTypeInternal _Collision_default_instance_;
 class QueryCondition;
 struct QueryConditionDefaultTypeInternal;
 extern QueryConditionDefaultTypeInternal _QueryCondition_default_instance_;
@@ -62,11 +63,13 @@ extern QueryRequestDefaultTypeInternal _QueryRequest_default_instance_;
 class QueryResponse;
 struct QueryResponseDefaultTypeInternal;
 extern QueryResponseDefaultTypeInternal _QueryResponse_default_instance_;
+}  // namespace collision_proto
 namespace google {
 namespace protobuf {
 }  // namespace protobuf
 }  // namespace google
 
+namespace collision_proto {
 enum Condition : int {
   EQUALS = 0,
   NOT_EQUALS = 1,
@@ -167,7 +170,7 @@ inline bool QueryFields_Parse(absl::string_view name, QueryFields* value) {
 // -------------------------------------------------------------------
 
 class QueryCondition final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:QueryCondition) */ {
+/* @@protoc_insertion_point(class_definition:collision_proto.QueryCondition) */ {
  public:
   inline QueryCondition() : QueryCondition(nullptr) {}
   ~QueryCondition() override;
@@ -278,7 +281,7 @@ class QueryCondition final : public ::google::protobuf::Message
   void InternalSwap(QueryCondition* other);
  private:
   friend class ::google::protobuf::internal::AnyMetadata;
-  static ::absl::string_view FullMessageName() { return "QueryCondition"; }
+  static ::absl::string_view FullMessageName() { return "collision_proto.QueryCondition"; }
 
  protected:
   explicit QueryCondition(::google::protobuf::Arena* arena);
@@ -300,24 +303,24 @@ class QueryCondition final : public ::google::protobuf::Message
     kStrDataFieldNumber = 3,
     kIntDataFieldNumber = 4,
   };
-  // .QueryFields field = 1;
+  // .collision_proto.QueryFields field = 1;
   void clear_field() ;
-  ::QueryFields field() const;
-  void set_field(::QueryFields value);
+  ::collision_proto::QueryFields field() const;
+  void set_field(::collision_proto::QueryFields value);
 
   private:
-  ::QueryFields _internal_field() const;
-  void _internal_set_field(::QueryFields value);
+  ::collision_proto::QueryFields _internal_field() const;
+  void _internal_set_field(::collision_proto::QueryFields value);
 
   public:
-  // .Condition condition = 2;
+  // .collision_proto.Condition condition = 2;
   void clear_condition() ;
-  ::Condition condition() const;
-  void set_condition(::Condition value);
+  ::collision_proto::Condition condition() const;
+  void set_condition(::collision_proto::Condition value);
 
   private:
-  ::Condition _internal_condition() const;
-  void _internal_set_condition(::Condition value);
+  ::collision_proto::Condition _internal_condition() const;
+  void _internal_set_condition(::collision_proto::Condition value);
 
   public:
   // string str_data = 3;
@@ -350,7 +353,7 @@ class QueryCondition final : public ::google::protobuf::Message
   public:
   void clear_data();
   DataCase data_case() const;
-  // @@protoc_insertion_point(class_scope:QueryCondition)
+  // @@protoc_insertion_point(class_scope:collision_proto.QueryCondition)
  private:
   class _Internal;
   void set_has_str_data();
@@ -360,7 +363,7 @@ class QueryCondition final : public ::google::protobuf::Message
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
       1, 4, 0,
-      31, 2>
+      47, 2>
       _table_;
 
   static constexpr const void* _raw_default_instance_ =
@@ -397,23 +400,23 @@ class QueryCondition final : public ::google::protobuf::Message
 };
 // -------------------------------------------------------------------
 
-class GRPCollision final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:GRPCollision) */ {
+class Collision final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:collision_proto.Collision) */ {
  public:
-  inline GRPCollision() : GRPCollision(nullptr) {}
-  ~GRPCollision() override;
+  inline Collision() : Collision(nullptr) {}
+  ~Collision() override;
   template <typename = void>
-  explicit PROTOBUF_CONSTEXPR GRPCollision(
+  explicit PROTOBUF_CONSTEXPR Collision(
       ::google::protobuf::internal::ConstantInitialized);
 
-  inline GRPCollision(const GRPCollision& from) : GRPCollision(nullptr, from) {}
-  inline GRPCollision(GRPCollision&& from) noexcept
-      : GRPCollision(nullptr, std::move(from)) {}
-  inline GRPCollision& operator=(const GRPCollision& from) {
+  inline Collision(const Collision& from) : Collision(nullptr, from) {}
+  inline Collision(Collision&& from) noexcept
+      : Collision(nullptr, std::move(from)) {}
+  inline Collision& operator=(const Collision& from) {
     CopyFrom(from);
     return *this;
   }
-  inline GRPCollision& operator=(GRPCollision&& from) noexcept {
+  inline Collision& operator=(Collision&& from) noexcept {
     if (this == &from) return *this;
     if (GetArena() == from.GetArena()
 #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -445,16 +448,16 @@ class GRPCollision final : public ::google::protobuf::Message
   static const ::google::protobuf::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const GRPCollision& default_instance() {
+  static const Collision& default_instance() {
     return *internal_default_instance();
   }
-  static inline const GRPCollision* internal_default_instance() {
-    return reinterpret_cast<const GRPCollision*>(
-        &_GRPCollision_default_instance_);
+  static inline const Collision* internal_default_instance() {
+    return reinterpret_cast<const Collision*>(
+        &_Collision_default_instance_);
   }
   static constexpr int kIndexInFileMessages = 2;
-  friend void swap(GRPCollision& a, GRPCollision& b) { a.Swap(&b); }
-  inline void Swap(GRPCollision* other) {
+  friend void swap(Collision& a, Collision& b) { a.Swap(&b); }
+  inline void Swap(Collision* other) {
     if (other == this) return;
 #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetArena() != nullptr && GetArena() == other->GetArena()) {
@@ -466,7 +469,7 @@ class GRPCollision final : public ::google::protobuf::Message
       ::google::protobuf::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(GRPCollision* other) {
+  void UnsafeArenaSwap(Collision* other) {
     if (other == this) return;
     ABSL_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -474,13 +477,13 @@ class GRPCollision final : public ::google::protobuf::Message
 
   // implements Message ----------------------------------------------
 
-  GRPCollision* New(::google::protobuf::Arena* arena = nullptr) const final {
-    return ::google::protobuf::Message::DefaultConstruct<GRPCollision>(arena);
+  Collision* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return ::google::protobuf::Message::DefaultConstruct<Collision>(arena);
   }
   using ::google::protobuf::Message::CopyFrom;
-  void CopyFrom(const GRPCollision& from);
+  void CopyFrom(const Collision& from);
   using ::google::protobuf::Message::MergeFrom;
-  void MergeFrom(const GRPCollision& from) { GRPCollision::MergeImpl(*this, from); }
+  void MergeFrom(const Collision& from) { Collision::MergeImpl(*this, from); }
 
   private:
   static void MergeImpl(
@@ -501,16 +504,16 @@ class GRPCollision final : public ::google::protobuf::Message
   private:
   void SharedCtor(::google::protobuf::Arena* arena);
   void SharedDtor();
-  void InternalSwap(GRPCollision* other);
+  void InternalSwap(Collision* other);
  private:
   friend class ::google::protobuf::internal::AnyMetadata;
-  static ::absl::string_view FullMessageName() { return "GRPCollision"; }
+  static ::absl::string_view FullMessageName() { return "collision_proto.Collision"; }
 
  protected:
-  explicit GRPCollision(::google::protobuf::Arena* arena);
-  GRPCollision(::google::protobuf::Arena* arena, const GRPCollision& from);
-  GRPCollision(::google::protobuf::Arena* arena, GRPCollision&& from) noexcept
-      : GRPCollision(arena) {
+  explicit Collision(::google::protobuf::Arena* arena);
+  Collision(::google::protobuf::Arena* arena, const Collision& from);
+  Collision(::google::protobuf::Arena* arena, Collision&& from) noexcept
+      : Collision(arena) {
     *this = ::std::move(from);
   }
   const ::google::protobuf::Message::ClassData* GetClassData() const final;
@@ -943,17 +946,17 @@ class GRPCollision final : public ::google::protobuf::Message
   void _internal_set_number_of_motorist_killed(::uint32_t value);
 
   public:
-  // @@protoc_insertion_point(class_scope:GRPCollision)
+  // @@protoc_insertion_point(class_scope:collision_proto.Collision)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
       5, 29, 0,
-      366, 2>
+      379, 2>
       _table_;
 
   static constexpr const void* _raw_default_instance_ =
-      &_GRPCollision_default_instance_;
+      &_Collision_default_instance_;
 
   friend class ::google::protobuf::MessageLite;
   friend class ::google::protobuf::Arena;
@@ -968,7 +971,7 @@ class GRPCollision final : public ::google::protobuf::Message
                           ::google::protobuf::Arena* arena);
     inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                           ::google::protobuf::Arena* arena, const Impl_& from,
-                          const GRPCollision& from_msg);
+                          const Collision& from_msg);
     ::google::protobuf::internal::ArenaStringPtr crash_date_;
     ::google::protobuf::internal::ArenaStringPtr crash_time_;
     ::google::protobuf::internal::ArenaStringPtr borough_;
@@ -1007,7 +1010,7 @@ class GRPCollision final : public ::google::protobuf::Message
 // -------------------------------------------------------------------
 
 class QueryResponse final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:QueryResponse) */ {
+/* @@protoc_insertion_point(class_definition:collision_proto.QueryResponse) */ {
  public:
   inline QueryResponse() : QueryResponse(nullptr) {}
   ~QueryResponse() override;
@@ -1113,7 +1116,7 @@ class QueryResponse final : public ::google::protobuf::Message
   void InternalSwap(QueryResponse* other);
  private:
   friend class ::google::protobuf::internal::AnyMetadata;
-  static ::absl::string_view FullMessageName() { return "QueryResponse"; }
+  static ::absl::string_view FullMessageName() { return "collision_proto.QueryResponse"; }
 
  protected:
   explicit QueryResponse(::google::protobuf::Arena* arena);
@@ -1132,24 +1135,24 @@ class QueryResponse final : public ::google::protobuf::Message
   enum : int {
     kCollisionFieldNumber = 1,
   };
-  // repeated .GRPCollision collision = 1;
+  // repeated .collision_proto.Collision collision = 1;
   int collision_size() const;
   private:
   int _internal_collision_size() const;
 
   public:
   void clear_collision() ;
-  ::GRPCollision* mutable_collision(int index);
-  ::google::protobuf::RepeatedPtrField<::GRPCollision>* mutable_collision();
+  ::collision_proto::Collision* mutable_collision(int index);
+  ::google::protobuf::RepeatedPtrField<::collision_proto::Collision>* mutable_collision();
 
   private:
-  const ::google::protobuf::RepeatedPtrField<::GRPCollision>& _internal_collision() const;
-  ::google::protobuf::RepeatedPtrField<::GRPCollision>* _internal_mutable_collision();
+  const ::google::protobuf::RepeatedPtrField<::collision_proto::Collision>& _internal_collision() const;
+  ::google::protobuf::RepeatedPtrField<::collision_proto::Collision>* _internal_mutable_collision();
   public:
-  const ::GRPCollision& collision(int index) const;
-  ::GRPCollision* add_collision();
-  const ::google::protobuf::RepeatedPtrField<::GRPCollision>& collision() const;
-  // @@protoc_insertion_point(class_scope:QueryResponse)
+  const ::collision_proto::Collision& collision(int index) const;
+  ::collision_proto::Collision* add_collision();
+  const ::google::protobuf::RepeatedPtrField<::collision_proto::Collision>& collision() const;
+  // @@protoc_insertion_point(class_scope:collision_proto.QueryResponse)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
@@ -1175,7 +1178,7 @@ class QueryResponse final : public ::google::protobuf::Message
     inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                           ::google::protobuf::Arena* arena, const Impl_& from,
                           const QueryResponse& from_msg);
-    ::google::protobuf::RepeatedPtrField< ::GRPCollision > collision_;
+    ::google::protobuf::RepeatedPtrField< ::collision_proto::Collision > collision_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -1185,7 +1188,7 @@ class QueryResponse final : public ::google::protobuf::Message
 // -------------------------------------------------------------------
 
 class QueryRequest final : public ::google::protobuf::Message
-/* @@protoc_insertion_point(class_definition:QueryRequest) */ {
+/* @@protoc_insertion_point(class_definition:collision_proto.QueryRequest) */ {
  public:
   inline QueryRequest() : QueryRequest(nullptr) {}
   ~QueryRequest() override;
@@ -1291,7 +1294,7 @@ class QueryRequest final : public ::google::protobuf::Message
   void InternalSwap(QueryRequest* other);
  private:
   friend class ::google::protobuf::internal::AnyMetadata;
-  static ::absl::string_view FullMessageName() { return "QueryRequest"; }
+  static ::absl::string_view FullMessageName() { return "collision_proto.QueryRequest"; }
 
  protected:
   explicit QueryRequest(::google::protobuf::Arena* arena);
@@ -1310,24 +1313,24 @@ class QueryRequest final : public ::google::protobuf::Message
   enum : int {
     kQueriesFieldNumber = 1,
   };
-  // repeated .QueryCondition queries = 1;
+  // repeated .collision_proto.QueryCondition queries = 1;
   int queries_size() const;
   private:
   int _internal_queries_size() const;
 
   public:
   void clear_queries() ;
-  ::QueryCondition* mutable_queries(int index);
-  ::google::protobuf::RepeatedPtrField<::QueryCondition>* mutable_queries();
+  ::collision_proto::QueryCondition* mutable_queries(int index);
+  ::google::protobuf::RepeatedPtrField<::collision_proto::QueryCondition>* mutable_queries();
 
   private:
-  const ::google::protobuf::RepeatedPtrField<::QueryCondition>& _internal_queries() const;
-  ::google::protobuf::RepeatedPtrField<::QueryCondition>* _internal_mutable_queries();
+  const ::google::protobuf::RepeatedPtrField<::collision_proto::QueryCondition>& _internal_queries() const;
+  ::google::protobuf::RepeatedPtrField<::collision_proto::QueryCondition>* _internal_mutable_queries();
   public:
-  const ::QueryCondition& queries(int index) const;
-  ::QueryCondition* add_queries();
-  const ::google::protobuf::RepeatedPtrField<::QueryCondition>& queries() const;
-  // @@protoc_insertion_point(class_scope:QueryRequest)
+  const ::collision_proto::QueryCondition& queries(int index) const;
+  ::collision_proto::QueryCondition* add_queries();
+  const ::google::protobuf::RepeatedPtrField<::collision_proto::QueryCondition>& queries() const;
+  // @@protoc_insertion_point(class_scope:collision_proto.QueryRequest)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
@@ -1353,7 +1356,7 @@ class QueryRequest final : public ::google::protobuf::Message
     inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                           ::google::protobuf::Arena* arena, const Impl_& from,
                           const QueryRequest& from_msg);
-    ::google::protobuf::RepeatedPtrField< ::QueryCondition > queries_;
+    ::google::protobuf::RepeatedPtrField< ::collision_proto::QueryCondition > queries_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -1377,46 +1380,46 @@ class QueryRequest final : public ::google::protobuf::Message
 
 // QueryCondition
 
-// .QueryFields field = 1;
+// .collision_proto.QueryFields field = 1;
 inline void QueryCondition::clear_field() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.field_ = 0;
 }
-inline ::QueryFields QueryCondition::field() const {
-  // @@protoc_insertion_point(field_get:QueryCondition.field)
+inline ::collision_proto::QueryFields QueryCondition::field() const {
+  // @@protoc_insertion_point(field_get:collision_proto.QueryCondition.field)
   return _internal_field();
 }
-inline void QueryCondition::set_field(::QueryFields value) {
+inline void QueryCondition::set_field(::collision_proto::QueryFields value) {
   _internal_set_field(value);
-  // @@protoc_insertion_point(field_set:QueryCondition.field)
+  // @@protoc_insertion_point(field_set:collision_proto.QueryCondition.field)
 }
-inline ::QueryFields QueryCondition::_internal_field() const {
+inline ::collision_proto::QueryFields QueryCondition::_internal_field() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  return static_cast<::QueryFields>(_impl_.field_);
+  return static_cast<::collision_proto::QueryFields>(_impl_.field_);
 }
-inline void QueryCondition::_internal_set_field(::QueryFields value) {
+inline void QueryCondition::_internal_set_field(::collision_proto::QueryFields value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.field_ = value;
 }
 
-// .Condition condition = 2;
+// .collision_proto.Condition condition = 2;
 inline void QueryCondition::clear_condition() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.condition_ = 0;
 }
-inline ::Condition QueryCondition::condition() const {
-  // @@protoc_insertion_point(field_get:QueryCondition.condition)
+inline ::collision_proto::Condition QueryCondition::condition() const {
+  // @@protoc_insertion_point(field_get:collision_proto.QueryCondition.condition)
   return _internal_condition();
 }
-inline void QueryCondition::set_condition(::Condition value) {
+inline void QueryCondition::set_condition(::collision_proto::Condition value) {
   _internal_set_condition(value);
-  // @@protoc_insertion_point(field_set:QueryCondition.condition)
+  // @@protoc_insertion_point(field_set:collision_proto.QueryCondition.condition)
 }
-inline ::Condition QueryCondition::_internal_condition() const {
+inline ::collision_proto::Condition QueryCondition::_internal_condition() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  return static_cast<::Condition>(_impl_.condition_);
+  return static_cast<::collision_proto::Condition>(_impl_.condition_);
 }
-inline void QueryCondition::_internal_set_condition(::Condition value) {
+inline void QueryCondition::_internal_set_condition(::collision_proto::Condition value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.condition_ = value;
 }
@@ -1437,7 +1440,7 @@ inline void QueryCondition::clear_str_data() {
 }
 inline const std::string& QueryCondition::str_data() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:QueryCondition.str_data)
+  // @@protoc_insertion_point(field_get:collision_proto.QueryCondition.str_data)
   return _internal_str_data();
 }
 template <typename Arg_, typename... Args_>
@@ -1451,11 +1454,11 @@ inline PROTOBUF_ALWAYS_INLINE void QueryCondition::set_str_data(Arg_&& arg,
     _impl_.data_.str_data_.InitDefault();
   }
   _impl_.data_.str_data_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:QueryCondition.str_data)
+  // @@protoc_insertion_point(field_set:collision_proto.QueryCondition.str_data)
 }
 inline std::string* QueryCondition::mutable_str_data() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_str_data();
-  // @@protoc_insertion_point(field_mutable:QueryCondition.str_data)
+  // @@protoc_insertion_point(field_mutable:collision_proto.QueryCondition.str_data)
   return _s;
 }
 inline const std::string& QueryCondition::_internal_str_data() const {
@@ -1487,7 +1490,7 @@ inline std::string* QueryCondition::_internal_mutable_str_data() {
 }
 inline std::string* QueryCondition::release_str_data() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:QueryCondition.str_data)
+  // @@protoc_insertion_point(field_release:collision_proto.QueryCondition.str_data)
   if (data_case() != kStrData) {
     return nullptr;
   }
@@ -1503,7 +1506,7 @@ inline void QueryCondition::set_allocated_str_data(std::string* value) {
     set_has_str_data();
     _impl_.data_.str_data_.InitAllocated(value, GetArena());
   }
-  // @@protoc_insertion_point(field_set_allocated:QueryCondition.str_data)
+  // @@protoc_insertion_point(field_set_allocated:collision_proto.QueryCondition.str_data)
 }
 
 // int32 int_data = 4;
@@ -1521,7 +1524,7 @@ inline void QueryCondition::clear_int_data() {
   }
 }
 inline ::int32_t QueryCondition::int_data() const {
-  // @@protoc_insertion_point(field_get:QueryCondition.int_data)
+  // @@protoc_insertion_point(field_get:collision_proto.QueryCondition.int_data)
   return _internal_int_data();
 }
 inline void QueryCondition::set_int_data(::int32_t value) {
@@ -1530,7 +1533,7 @@ inline void QueryCondition::set_int_data(::int32_t value) {
     set_has_int_data();
   }
   _impl_.data_.int_data_ = value;
-  // @@protoc_insertion_point(field_set:QueryCondition.int_data)
+  // @@protoc_insertion_point(field_set:collision_proto.QueryCondition.int_data)
 }
 inline ::int32_t QueryCondition::_internal_int_data() const {
   if (data_case() == kIntData) {
@@ -1552,7 +1555,7 @@ inline QueryCondition::DataCase QueryCondition::data_case() const {
 
 // QueryRequest
 
-// repeated .QueryCondition queries = 1;
+// repeated .collision_proto.QueryCondition queries = 1;
 inline int QueryRequest::_internal_queries_size() const {
   return _internal_queries().size();
 }
@@ -1563,39 +1566,39 @@ inline void QueryRequest::clear_queries() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.queries_.Clear();
 }
-inline ::QueryCondition* QueryRequest::mutable_queries(int index)
+inline ::collision_proto::QueryCondition* QueryRequest::mutable_queries(int index)
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_mutable:QueryRequest.queries)
+  // @@protoc_insertion_point(field_mutable:collision_proto.QueryRequest.queries)
   return _internal_mutable_queries()->Mutable(index);
 }
-inline ::google::protobuf::RepeatedPtrField<::QueryCondition>* QueryRequest::mutable_queries()
+inline ::google::protobuf::RepeatedPtrField<::collision_proto::QueryCondition>* QueryRequest::mutable_queries()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_mutable_list:QueryRequest.queries)
+  // @@protoc_insertion_point(field_mutable_list:collision_proto.QueryRequest.queries)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _internal_mutable_queries();
 }
-inline const ::QueryCondition& QueryRequest::queries(int index) const
+inline const ::collision_proto::QueryCondition& QueryRequest::queries(int index) const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:QueryRequest.queries)
+  // @@protoc_insertion_point(field_get:collision_proto.QueryRequest.queries)
   return _internal_queries().Get(index);
 }
-inline ::QueryCondition* QueryRequest::add_queries() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline ::collision_proto::QueryCondition* QueryRequest::add_queries() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  ::QueryCondition* _add = _internal_mutable_queries()->Add();
-  // @@protoc_insertion_point(field_add:QueryRequest.queries)
+  ::collision_proto::QueryCondition* _add = _internal_mutable_queries()->Add();
+  // @@protoc_insertion_point(field_add:collision_proto.QueryRequest.queries)
   return _add;
 }
-inline const ::google::protobuf::RepeatedPtrField<::QueryCondition>& QueryRequest::queries() const
+inline const ::google::protobuf::RepeatedPtrField<::collision_proto::QueryCondition>& QueryRequest::queries() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_list:QueryRequest.queries)
+  // @@protoc_insertion_point(field_list:collision_proto.QueryRequest.queries)
   return _internal_queries();
 }
-inline const ::google::protobuf::RepeatedPtrField<::QueryCondition>&
+inline const ::google::protobuf::RepeatedPtrField<::collision_proto::QueryCondition>&
 QueryRequest::_internal_queries() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.queries_;
 }
-inline ::google::protobuf::RepeatedPtrField<::QueryCondition>*
+inline ::google::protobuf::RepeatedPtrField<::collision_proto::QueryCondition>*
 QueryRequest::_internal_mutable_queries() {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return &_impl_.queries_;
@@ -1603,48 +1606,48 @@ QueryRequest::_internal_mutable_queries() {
 
 // -------------------------------------------------------------------
 
-// GRPCollision
+// Collision
 
 // string crash_date = 1;
-inline void GRPCollision::clear_crash_date() {
+inline void Collision::clear_crash_date() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.crash_date_.ClearToEmpty();
 }
-inline const std::string& GRPCollision::crash_date() const
+inline const std::string& Collision::crash_date() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:GRPCollision.crash_date)
+  // @@protoc_insertion_point(field_get:collision_proto.Collision.crash_date)
   return _internal_crash_date();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void GRPCollision::set_crash_date(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void Collision::set_crash_date(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.crash_date_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:GRPCollision.crash_date)
+  // @@protoc_insertion_point(field_set:collision_proto.Collision.crash_date)
 }
-inline std::string* GRPCollision::mutable_crash_date() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* Collision::mutable_crash_date() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_crash_date();
-  // @@protoc_insertion_point(field_mutable:GRPCollision.crash_date)
+  // @@protoc_insertion_point(field_mutable:collision_proto.Collision.crash_date)
   return _s;
 }
-inline const std::string& GRPCollision::_internal_crash_date() const {
+inline const std::string& Collision::_internal_crash_date() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.crash_date_.Get();
 }
-inline void GRPCollision::_internal_set_crash_date(const std::string& value) {
+inline void Collision::_internal_set_crash_date(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.crash_date_.Set(value, GetArena());
 }
-inline std::string* GRPCollision::_internal_mutable_crash_date() {
+inline std::string* Collision::_internal_mutable_crash_date() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.crash_date_.Mutable( GetArena());
 }
-inline std::string* GRPCollision::release_crash_date() {
+inline std::string* Collision::release_crash_date() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:GRPCollision.crash_date)
+  // @@protoc_insertion_point(field_release:collision_proto.Collision.crash_date)
   return _impl_.crash_date_.Release();
 }
-inline void GRPCollision::set_allocated_crash_date(std::string* value) {
+inline void Collision::set_allocated_crash_date(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.crash_date_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1652,49 +1655,49 @@ inline void GRPCollision::set_allocated_crash_date(std::string* value) {
           _impl_.crash_date_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:GRPCollision.crash_date)
+  // @@protoc_insertion_point(field_set_allocated:collision_proto.Collision.crash_date)
 }
 
 // string crash_time = 2;
-inline void GRPCollision::clear_crash_time() {
+inline void Collision::clear_crash_time() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.crash_time_.ClearToEmpty();
 }
-inline const std::string& GRPCollision::crash_time() const
+inline const std::string& Collision::crash_time() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:GRPCollision.crash_time)
+  // @@protoc_insertion_point(field_get:collision_proto.Collision.crash_time)
   return _internal_crash_time();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void GRPCollision::set_crash_time(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void Collision::set_crash_time(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.crash_time_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:GRPCollision.crash_time)
+  // @@protoc_insertion_point(field_set:collision_proto.Collision.crash_time)
 }
-inline std::string* GRPCollision::mutable_crash_time() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* Collision::mutable_crash_time() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_crash_time();
-  // @@protoc_insertion_point(field_mutable:GRPCollision.crash_time)
+  // @@protoc_insertion_point(field_mutable:collision_proto.Collision.crash_time)
   return _s;
 }
-inline const std::string& GRPCollision::_internal_crash_time() const {
+inline const std::string& Collision::_internal_crash_time() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.crash_time_.Get();
 }
-inline void GRPCollision::_internal_set_crash_time(const std::string& value) {
+inline void Collision::_internal_set_crash_time(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.crash_time_.Set(value, GetArena());
 }
-inline std::string* GRPCollision::_internal_mutable_crash_time() {
+inline std::string* Collision::_internal_mutable_crash_time() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.crash_time_.Mutable( GetArena());
 }
-inline std::string* GRPCollision::release_crash_time() {
+inline std::string* Collision::release_crash_time() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:GRPCollision.crash_time)
+  // @@protoc_insertion_point(field_release:collision_proto.Collision.crash_time)
   return _impl_.crash_time_.Release();
 }
-inline void GRPCollision::set_allocated_crash_time(std::string* value) {
+inline void Collision::set_allocated_crash_time(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.crash_time_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1702,49 +1705,49 @@ inline void GRPCollision::set_allocated_crash_time(std::string* value) {
           _impl_.crash_time_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:GRPCollision.crash_time)
+  // @@protoc_insertion_point(field_set_allocated:collision_proto.Collision.crash_time)
 }
 
 // string borough = 3;
-inline void GRPCollision::clear_borough() {
+inline void Collision::clear_borough() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.borough_.ClearToEmpty();
 }
-inline const std::string& GRPCollision::borough() const
+inline const std::string& Collision::borough() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:GRPCollision.borough)
+  // @@protoc_insertion_point(field_get:collision_proto.Collision.borough)
   return _internal_borough();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void GRPCollision::set_borough(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void Collision::set_borough(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.borough_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:GRPCollision.borough)
+  // @@protoc_insertion_point(field_set:collision_proto.Collision.borough)
 }
-inline std::string* GRPCollision::mutable_borough() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* Collision::mutable_borough() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_borough();
-  // @@protoc_insertion_point(field_mutable:GRPCollision.borough)
+  // @@protoc_insertion_point(field_mutable:collision_proto.Collision.borough)
   return _s;
 }
-inline const std::string& GRPCollision::_internal_borough() const {
+inline const std::string& Collision::_internal_borough() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.borough_.Get();
 }
-inline void GRPCollision::_internal_set_borough(const std::string& value) {
+inline void Collision::_internal_set_borough(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.borough_.Set(value, GetArena());
 }
-inline std::string* GRPCollision::_internal_mutable_borough() {
+inline std::string* Collision::_internal_mutable_borough() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.borough_.Mutable( GetArena());
 }
-inline std::string* GRPCollision::release_borough() {
+inline std::string* Collision::release_borough() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:GRPCollision.borough)
+  // @@protoc_insertion_point(field_release:collision_proto.Collision.borough)
   return _impl_.borough_.Release();
 }
-inline void GRPCollision::set_allocated_borough(std::string* value) {
+inline void Collision::set_allocated_borough(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.borough_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1752,115 +1755,115 @@ inline void GRPCollision::set_allocated_borough(std::string* value) {
           _impl_.borough_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:GRPCollision.borough)
+  // @@protoc_insertion_point(field_set_allocated:collision_proto.Collision.borough)
 }
 
 // uint32 zip_code = 4;
-inline void GRPCollision::clear_zip_code() {
+inline void Collision::clear_zip_code() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.zip_code_ = 0u;
 }
-inline ::uint32_t GRPCollision::zip_code() const {
-  // @@protoc_insertion_point(field_get:GRPCollision.zip_code)
+inline ::uint32_t Collision::zip_code() const {
+  // @@protoc_insertion_point(field_get:collision_proto.Collision.zip_code)
   return _internal_zip_code();
 }
-inline void GRPCollision::set_zip_code(::uint32_t value) {
+inline void Collision::set_zip_code(::uint32_t value) {
   _internal_set_zip_code(value);
-  // @@protoc_insertion_point(field_set:GRPCollision.zip_code)
+  // @@protoc_insertion_point(field_set:collision_proto.Collision.zip_code)
 }
-inline ::uint32_t GRPCollision::_internal_zip_code() const {
+inline ::uint32_t Collision::_internal_zip_code() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.zip_code_;
 }
-inline void GRPCollision::_internal_set_zip_code(::uint32_t value) {
+inline void Collision::_internal_set_zip_code(::uint32_t value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.zip_code_ = value;
 }
 
 // float latitude = 5;
-inline void GRPCollision::clear_latitude() {
+inline void Collision::clear_latitude() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.latitude_ = 0;
 }
-inline float GRPCollision::latitude() const {
-  // @@protoc_insertion_point(field_get:GRPCollision.latitude)
+inline float Collision::latitude() const {
+  // @@protoc_insertion_point(field_get:collision_proto.Collision.latitude)
   return _internal_latitude();
 }
-inline void GRPCollision::set_latitude(float value) {
+inline void Collision::set_latitude(float value) {
   _internal_set_latitude(value);
-  // @@protoc_insertion_point(field_set:GRPCollision.latitude)
+  // @@protoc_insertion_point(field_set:collision_proto.Collision.latitude)
 }
-inline float GRPCollision::_internal_latitude() const {
+inline float Collision::_internal_latitude() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.latitude_;
 }
-inline void GRPCollision::_internal_set_latitude(float value) {
+inline void Collision::_internal_set_latitude(float value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.latitude_ = value;
 }
 
 // float longitude = 6;
-inline void GRPCollision::clear_longitude() {
+inline void Collision::clear_longitude() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.longitude_ = 0;
 }
-inline float GRPCollision::longitude() const {
-  // @@protoc_insertion_point(field_get:GRPCollision.longitude)
+inline float Collision::longitude() const {
+  // @@protoc_insertion_point(field_get:collision_proto.Collision.longitude)
   return _internal_longitude();
 }
-inline void GRPCollision::set_longitude(float value) {
+inline void Collision::set_longitude(float value) {
   _internal_set_longitude(value);
-  // @@protoc_insertion_point(field_set:GRPCollision.longitude)
+  // @@protoc_insertion_point(field_set:collision_proto.Collision.longitude)
 }
-inline float GRPCollision::_internal_longitude() const {
+inline float Collision::_internal_longitude() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.longitude_;
 }
-inline void GRPCollision::_internal_set_longitude(float value) {
+inline void Collision::_internal_set_longitude(float value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.longitude_ = value;
 }
 
 // string location = 7;
-inline void GRPCollision::clear_location() {
+inline void Collision::clear_location() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.location_.ClearToEmpty();
 }
-inline const std::string& GRPCollision::location() const
+inline const std::string& Collision::location() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:GRPCollision.location)
+  // @@protoc_insertion_point(field_get:collision_proto.Collision.location)
   return _internal_location();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void GRPCollision::set_location(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void Collision::set_location(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.location_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:GRPCollision.location)
+  // @@protoc_insertion_point(field_set:collision_proto.Collision.location)
 }
-inline std::string* GRPCollision::mutable_location() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* Collision::mutable_location() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_location();
-  // @@protoc_insertion_point(field_mutable:GRPCollision.location)
+  // @@protoc_insertion_point(field_mutable:collision_proto.Collision.location)
   return _s;
 }
-inline const std::string& GRPCollision::_internal_location() const {
+inline const std::string& Collision::_internal_location() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.location_.Get();
 }
-inline void GRPCollision::_internal_set_location(const std::string& value) {
+inline void Collision::_internal_set_location(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.location_.Set(value, GetArena());
 }
-inline std::string* GRPCollision::_internal_mutable_location() {
+inline std::string* Collision::_internal_mutable_location() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.location_.Mutable( GetArena());
 }
-inline std::string* GRPCollision::release_location() {
+inline std::string* Collision::release_location() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:GRPCollision.location)
+  // @@protoc_insertion_point(field_release:collision_proto.Collision.location)
   return _impl_.location_.Release();
 }
-inline void GRPCollision::set_allocated_location(std::string* value) {
+inline void Collision::set_allocated_location(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.location_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1868,49 +1871,49 @@ inline void GRPCollision::set_allocated_location(std::string* value) {
           _impl_.location_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:GRPCollision.location)
+  // @@protoc_insertion_point(field_set_allocated:collision_proto.Collision.location)
 }
 
 // string on_street_name = 8;
-inline void GRPCollision::clear_on_street_name() {
+inline void Collision::clear_on_street_name() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.on_street_name_.ClearToEmpty();
 }
-inline const std::string& GRPCollision::on_street_name() const
+inline const std::string& Collision::on_street_name() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:GRPCollision.on_street_name)
+  // @@protoc_insertion_point(field_get:collision_proto.Collision.on_street_name)
   return _internal_on_street_name();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void GRPCollision::set_on_street_name(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void Collision::set_on_street_name(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.on_street_name_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:GRPCollision.on_street_name)
+  // @@protoc_insertion_point(field_set:collision_proto.Collision.on_street_name)
 }
-inline std::string* GRPCollision::mutable_on_street_name() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* Collision::mutable_on_street_name() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_on_street_name();
-  // @@protoc_insertion_point(field_mutable:GRPCollision.on_street_name)
+  // @@protoc_insertion_point(field_mutable:collision_proto.Collision.on_street_name)
   return _s;
 }
-inline const std::string& GRPCollision::_internal_on_street_name() const {
+inline const std::string& Collision::_internal_on_street_name() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.on_street_name_.Get();
 }
-inline void GRPCollision::_internal_set_on_street_name(const std::string& value) {
+inline void Collision::_internal_set_on_street_name(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.on_street_name_.Set(value, GetArena());
 }
-inline std::string* GRPCollision::_internal_mutable_on_street_name() {
+inline std::string* Collision::_internal_mutable_on_street_name() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.on_street_name_.Mutable( GetArena());
 }
-inline std::string* GRPCollision::release_on_street_name() {
+inline std::string* Collision::release_on_street_name() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:GRPCollision.on_street_name)
+  // @@protoc_insertion_point(field_release:collision_proto.Collision.on_street_name)
   return _impl_.on_street_name_.Release();
 }
-inline void GRPCollision::set_allocated_on_street_name(std::string* value) {
+inline void Collision::set_allocated_on_street_name(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.on_street_name_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1918,49 +1921,49 @@ inline void GRPCollision::set_allocated_on_street_name(std::string* value) {
           _impl_.on_street_name_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:GRPCollision.on_street_name)
+  // @@protoc_insertion_point(field_set_allocated:collision_proto.Collision.on_street_name)
 }
 
 // string cross_street_name = 9;
-inline void GRPCollision::clear_cross_street_name() {
+inline void Collision::clear_cross_street_name() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.cross_street_name_.ClearToEmpty();
 }
-inline const std::string& GRPCollision::cross_street_name() const
+inline const std::string& Collision::cross_street_name() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:GRPCollision.cross_street_name)
+  // @@protoc_insertion_point(field_get:collision_proto.Collision.cross_street_name)
   return _internal_cross_street_name();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void GRPCollision::set_cross_street_name(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void Collision::set_cross_street_name(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.cross_street_name_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:GRPCollision.cross_street_name)
+  // @@protoc_insertion_point(field_set:collision_proto.Collision.cross_street_name)
 }
-inline std::string* GRPCollision::mutable_cross_street_name() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* Collision::mutable_cross_street_name() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_cross_street_name();
-  // @@protoc_insertion_point(field_mutable:GRPCollision.cross_street_name)
+  // @@protoc_insertion_point(field_mutable:collision_proto.Collision.cross_street_name)
   return _s;
 }
-inline const std::string& GRPCollision::_internal_cross_street_name() const {
+inline const std::string& Collision::_internal_cross_street_name() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.cross_street_name_.Get();
 }
-inline void GRPCollision::_internal_set_cross_street_name(const std::string& value) {
+inline void Collision::_internal_set_cross_street_name(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.cross_street_name_.Set(value, GetArena());
 }
-inline std::string* GRPCollision::_internal_mutable_cross_street_name() {
+inline std::string* Collision::_internal_mutable_cross_street_name() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.cross_street_name_.Mutable( GetArena());
 }
-inline std::string* GRPCollision::release_cross_street_name() {
+inline std::string* Collision::release_cross_street_name() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:GRPCollision.cross_street_name)
+  // @@protoc_insertion_point(field_release:collision_proto.Collision.cross_street_name)
   return _impl_.cross_street_name_.Release();
 }
-inline void GRPCollision::set_allocated_cross_street_name(std::string* value) {
+inline void Collision::set_allocated_cross_street_name(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.cross_street_name_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -1968,49 +1971,49 @@ inline void GRPCollision::set_allocated_cross_street_name(std::string* value) {
           _impl_.cross_street_name_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:GRPCollision.cross_street_name)
+  // @@protoc_insertion_point(field_set_allocated:collision_proto.Collision.cross_street_name)
 }
 
 // string off_street_name = 10;
-inline void GRPCollision::clear_off_street_name() {
+inline void Collision::clear_off_street_name() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.off_street_name_.ClearToEmpty();
 }
-inline const std::string& GRPCollision::off_street_name() const
+inline const std::string& Collision::off_street_name() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:GRPCollision.off_street_name)
+  // @@protoc_insertion_point(field_get:collision_proto.Collision.off_street_name)
   return _internal_off_street_name();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void GRPCollision::set_off_street_name(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void Collision::set_off_street_name(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.off_street_name_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:GRPCollision.off_street_name)
+  // @@protoc_insertion_point(field_set:collision_proto.Collision.off_street_name)
 }
-inline std::string* GRPCollision::mutable_off_street_name() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* Collision::mutable_off_street_name() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_off_street_name();
-  // @@protoc_insertion_point(field_mutable:GRPCollision.off_street_name)
+  // @@protoc_insertion_point(field_mutable:collision_proto.Collision.off_street_name)
   return _s;
 }
-inline const std::string& GRPCollision::_internal_off_street_name() const {
+inline const std::string& Collision::_internal_off_street_name() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.off_street_name_.Get();
 }
-inline void GRPCollision::_internal_set_off_street_name(const std::string& value) {
+inline void Collision::_internal_set_off_street_name(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.off_street_name_.Set(value, GetArena());
 }
-inline std::string* GRPCollision::_internal_mutable_off_street_name() {
+inline std::string* Collision::_internal_mutable_off_street_name() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.off_street_name_.Mutable( GetArena());
 }
-inline std::string* GRPCollision::release_off_street_name() {
+inline std::string* Collision::release_off_street_name() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:GRPCollision.off_street_name)
+  // @@protoc_insertion_point(field_release:collision_proto.Collision.off_street_name)
   return _impl_.off_street_name_.Release();
 }
-inline void GRPCollision::set_allocated_off_street_name(std::string* value) {
+inline void Collision::set_allocated_off_street_name(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.off_street_name_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2018,225 +2021,225 @@ inline void GRPCollision::set_allocated_off_street_name(std::string* value) {
           _impl_.off_street_name_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:GRPCollision.off_street_name)
+  // @@protoc_insertion_point(field_set_allocated:collision_proto.Collision.off_street_name)
 }
 
 // uint32 number_of_persons_injured = 11;
-inline void GRPCollision::clear_number_of_persons_injured() {
+inline void Collision::clear_number_of_persons_injured() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.number_of_persons_injured_ = 0u;
 }
-inline ::uint32_t GRPCollision::number_of_persons_injured() const {
-  // @@protoc_insertion_point(field_get:GRPCollision.number_of_persons_injured)
+inline ::uint32_t Collision::number_of_persons_injured() const {
+  // @@protoc_insertion_point(field_get:collision_proto.Collision.number_of_persons_injured)
   return _internal_number_of_persons_injured();
 }
-inline void GRPCollision::set_number_of_persons_injured(::uint32_t value) {
+inline void Collision::set_number_of_persons_injured(::uint32_t value) {
   _internal_set_number_of_persons_injured(value);
-  // @@protoc_insertion_point(field_set:GRPCollision.number_of_persons_injured)
+  // @@protoc_insertion_point(field_set:collision_proto.Collision.number_of_persons_injured)
 }
-inline ::uint32_t GRPCollision::_internal_number_of_persons_injured() const {
+inline ::uint32_t Collision::_internal_number_of_persons_injured() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.number_of_persons_injured_;
 }
-inline void GRPCollision::_internal_set_number_of_persons_injured(::uint32_t value) {
+inline void Collision::_internal_set_number_of_persons_injured(::uint32_t value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.number_of_persons_injured_ = value;
 }
 
 // uint32 number_of_persons_killed = 12;
-inline void GRPCollision::clear_number_of_persons_killed() {
+inline void Collision::clear_number_of_persons_killed() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.number_of_persons_killed_ = 0u;
 }
-inline ::uint32_t GRPCollision::number_of_persons_killed() const {
-  // @@protoc_insertion_point(field_get:GRPCollision.number_of_persons_killed)
+inline ::uint32_t Collision::number_of_persons_killed() const {
+  // @@protoc_insertion_point(field_get:collision_proto.Collision.number_of_persons_killed)
   return _internal_number_of_persons_killed();
 }
-inline void GRPCollision::set_number_of_persons_killed(::uint32_t value) {
+inline void Collision::set_number_of_persons_killed(::uint32_t value) {
   _internal_set_number_of_persons_killed(value);
-  // @@protoc_insertion_point(field_set:GRPCollision.number_of_persons_killed)
+  // @@protoc_insertion_point(field_set:collision_proto.Collision.number_of_persons_killed)
 }
-inline ::uint32_t GRPCollision::_internal_number_of_persons_killed() const {
+inline ::uint32_t Collision::_internal_number_of_persons_killed() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.number_of_persons_killed_;
 }
-inline void GRPCollision::_internal_set_number_of_persons_killed(::uint32_t value) {
+inline void Collision::_internal_set_number_of_persons_killed(::uint32_t value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.number_of_persons_killed_ = value;
 }
 
 // uint32 number_of_pedestrians_injured = 13;
-inline void GRPCollision::clear_number_of_pedestrians_injured() {
+inline void Collision::clear_number_of_pedestrians_injured() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.number_of_pedestrians_injured_ = 0u;
 }
-inline ::uint32_t GRPCollision::number_of_pedestrians_injured() const {
-  // @@protoc_insertion_point(field_get:GRPCollision.number_of_pedestrians_injured)
+inline ::uint32_t Collision::number_of_pedestrians_injured() const {
+  // @@protoc_insertion_point(field_get:collision_proto.Collision.number_of_pedestrians_injured)
   return _internal_number_of_pedestrians_injured();
 }
-inline void GRPCollision::set_number_of_pedestrians_injured(::uint32_t value) {
+inline void Collision::set_number_of_pedestrians_injured(::uint32_t value) {
   _internal_set_number_of_pedestrians_injured(value);
-  // @@protoc_insertion_point(field_set:GRPCollision.number_of_pedestrians_injured)
+  // @@protoc_insertion_point(field_set:collision_proto.Collision.number_of_pedestrians_injured)
 }
-inline ::uint32_t GRPCollision::_internal_number_of_pedestrians_injured() const {
+inline ::uint32_t Collision::_internal_number_of_pedestrians_injured() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.number_of_pedestrians_injured_;
 }
-inline void GRPCollision::_internal_set_number_of_pedestrians_injured(::uint32_t value) {
+inline void Collision::_internal_set_number_of_pedestrians_injured(::uint32_t value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.number_of_pedestrians_injured_ = value;
 }
 
 // uint32 number_of_pedestrians_killed = 14;
-inline void GRPCollision::clear_number_of_pedestrians_killed() {
+inline void Collision::clear_number_of_pedestrians_killed() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.number_of_pedestrians_killed_ = 0u;
 }
-inline ::uint32_t GRPCollision::number_of_pedestrians_killed() const {
-  // @@protoc_insertion_point(field_get:GRPCollision.number_of_pedestrians_killed)
+inline ::uint32_t Collision::number_of_pedestrians_killed() const {
+  // @@protoc_insertion_point(field_get:collision_proto.Collision.number_of_pedestrians_killed)
   return _internal_number_of_pedestrians_killed();
 }
-inline void GRPCollision::set_number_of_pedestrians_killed(::uint32_t value) {
+inline void Collision::set_number_of_pedestrians_killed(::uint32_t value) {
   _internal_set_number_of_pedestrians_killed(value);
-  // @@protoc_insertion_point(field_set:GRPCollision.number_of_pedestrians_killed)
+  // @@protoc_insertion_point(field_set:collision_proto.Collision.number_of_pedestrians_killed)
 }
-inline ::uint32_t GRPCollision::_internal_number_of_pedestrians_killed() const {
+inline ::uint32_t Collision::_internal_number_of_pedestrians_killed() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.number_of_pedestrians_killed_;
 }
-inline void GRPCollision::_internal_set_number_of_pedestrians_killed(::uint32_t value) {
+inline void Collision::_internal_set_number_of_pedestrians_killed(::uint32_t value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.number_of_pedestrians_killed_ = value;
 }
 
 // uint32 number_of_cyclist_injured = 15;
-inline void GRPCollision::clear_number_of_cyclist_injured() {
+inline void Collision::clear_number_of_cyclist_injured() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.number_of_cyclist_injured_ = 0u;
 }
-inline ::uint32_t GRPCollision::number_of_cyclist_injured() const {
-  // @@protoc_insertion_point(field_get:GRPCollision.number_of_cyclist_injured)
+inline ::uint32_t Collision::number_of_cyclist_injured() const {
+  // @@protoc_insertion_point(field_get:collision_proto.Collision.number_of_cyclist_injured)
   return _internal_number_of_cyclist_injured();
 }
-inline void GRPCollision::set_number_of_cyclist_injured(::uint32_t value) {
+inline void Collision::set_number_of_cyclist_injured(::uint32_t value) {
   _internal_set_number_of_cyclist_injured(value);
-  // @@protoc_insertion_point(field_set:GRPCollision.number_of_cyclist_injured)
+  // @@protoc_insertion_point(field_set:collision_proto.Collision.number_of_cyclist_injured)
 }
-inline ::uint32_t GRPCollision::_internal_number_of_cyclist_injured() const {
+inline ::uint32_t Collision::_internal_number_of_cyclist_injured() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.number_of_cyclist_injured_;
 }
-inline void GRPCollision::_internal_set_number_of_cyclist_injured(::uint32_t value) {
+inline void Collision::_internal_set_number_of_cyclist_injured(::uint32_t value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.number_of_cyclist_injured_ = value;
 }
 
 // uint32 number_of_cyclist_killed = 16;
-inline void GRPCollision::clear_number_of_cyclist_killed() {
+inline void Collision::clear_number_of_cyclist_killed() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.number_of_cyclist_killed_ = 0u;
 }
-inline ::uint32_t GRPCollision::number_of_cyclist_killed() const {
-  // @@protoc_insertion_point(field_get:GRPCollision.number_of_cyclist_killed)
+inline ::uint32_t Collision::number_of_cyclist_killed() const {
+  // @@protoc_insertion_point(field_get:collision_proto.Collision.number_of_cyclist_killed)
   return _internal_number_of_cyclist_killed();
 }
-inline void GRPCollision::set_number_of_cyclist_killed(::uint32_t value) {
+inline void Collision::set_number_of_cyclist_killed(::uint32_t value) {
   _internal_set_number_of_cyclist_killed(value);
-  // @@protoc_insertion_point(field_set:GRPCollision.number_of_cyclist_killed)
+  // @@protoc_insertion_point(field_set:collision_proto.Collision.number_of_cyclist_killed)
 }
-inline ::uint32_t GRPCollision::_internal_number_of_cyclist_killed() const {
+inline ::uint32_t Collision::_internal_number_of_cyclist_killed() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.number_of_cyclist_killed_;
 }
-inline void GRPCollision::_internal_set_number_of_cyclist_killed(::uint32_t value) {
+inline void Collision::_internal_set_number_of_cyclist_killed(::uint32_t value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.number_of_cyclist_killed_ = value;
 }
 
 // uint32 number_of_motorist_injured = 17;
-inline void GRPCollision::clear_number_of_motorist_injured() {
+inline void Collision::clear_number_of_motorist_injured() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.number_of_motorist_injured_ = 0u;
 }
-inline ::uint32_t GRPCollision::number_of_motorist_injured() const {
-  // @@protoc_insertion_point(field_get:GRPCollision.number_of_motorist_injured)
+inline ::uint32_t Collision::number_of_motorist_injured() const {
+  // @@protoc_insertion_point(field_get:collision_proto.Collision.number_of_motorist_injured)
   return _internal_number_of_motorist_injured();
 }
-inline void GRPCollision::set_number_of_motorist_injured(::uint32_t value) {
+inline void Collision::set_number_of_motorist_injured(::uint32_t value) {
   _internal_set_number_of_motorist_injured(value);
-  // @@protoc_insertion_point(field_set:GRPCollision.number_of_motorist_injured)
+  // @@protoc_insertion_point(field_set:collision_proto.Collision.number_of_motorist_injured)
 }
-inline ::uint32_t GRPCollision::_internal_number_of_motorist_injured() const {
+inline ::uint32_t Collision::_internal_number_of_motorist_injured() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.number_of_motorist_injured_;
 }
-inline void GRPCollision::_internal_set_number_of_motorist_injured(::uint32_t value) {
+inline void Collision::_internal_set_number_of_motorist_injured(::uint32_t value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.number_of_motorist_injured_ = value;
 }
 
 // uint32 number_of_motorist_killed = 18;
-inline void GRPCollision::clear_number_of_motorist_killed() {
+inline void Collision::clear_number_of_motorist_killed() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.number_of_motorist_killed_ = 0u;
 }
-inline ::uint32_t GRPCollision::number_of_motorist_killed() const {
-  // @@protoc_insertion_point(field_get:GRPCollision.number_of_motorist_killed)
+inline ::uint32_t Collision::number_of_motorist_killed() const {
+  // @@protoc_insertion_point(field_get:collision_proto.Collision.number_of_motorist_killed)
   return _internal_number_of_motorist_killed();
 }
-inline void GRPCollision::set_number_of_motorist_killed(::uint32_t value) {
+inline void Collision::set_number_of_motorist_killed(::uint32_t value) {
   _internal_set_number_of_motorist_killed(value);
-  // @@protoc_insertion_point(field_set:GRPCollision.number_of_motorist_killed)
+  // @@protoc_insertion_point(field_set:collision_proto.Collision.number_of_motorist_killed)
 }
-inline ::uint32_t GRPCollision::_internal_number_of_motorist_killed() const {
+inline ::uint32_t Collision::_internal_number_of_motorist_killed() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.number_of_motorist_killed_;
 }
-inline void GRPCollision::_internal_set_number_of_motorist_killed(::uint32_t value) {
+inline void Collision::_internal_set_number_of_motorist_killed(::uint32_t value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.number_of_motorist_killed_ = value;
 }
 
 // string contributing_factor_vehicle_1 = 19;
-inline void GRPCollision::clear_contributing_factor_vehicle_1() {
+inline void Collision::clear_contributing_factor_vehicle_1() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.contributing_factor_vehicle_1_.ClearToEmpty();
 }
-inline const std::string& GRPCollision::contributing_factor_vehicle_1() const
+inline const std::string& Collision::contributing_factor_vehicle_1() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:GRPCollision.contributing_factor_vehicle_1)
+  // @@protoc_insertion_point(field_get:collision_proto.Collision.contributing_factor_vehicle_1)
   return _internal_contributing_factor_vehicle_1();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void GRPCollision::set_contributing_factor_vehicle_1(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void Collision::set_contributing_factor_vehicle_1(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.contributing_factor_vehicle_1_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:GRPCollision.contributing_factor_vehicle_1)
+  // @@protoc_insertion_point(field_set:collision_proto.Collision.contributing_factor_vehicle_1)
 }
-inline std::string* GRPCollision::mutable_contributing_factor_vehicle_1() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* Collision::mutable_contributing_factor_vehicle_1() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_contributing_factor_vehicle_1();
-  // @@protoc_insertion_point(field_mutable:GRPCollision.contributing_factor_vehicle_1)
+  // @@protoc_insertion_point(field_mutable:collision_proto.Collision.contributing_factor_vehicle_1)
   return _s;
 }
-inline const std::string& GRPCollision::_internal_contributing_factor_vehicle_1() const {
+inline const std::string& Collision::_internal_contributing_factor_vehicle_1() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.contributing_factor_vehicle_1_.Get();
 }
-inline void GRPCollision::_internal_set_contributing_factor_vehicle_1(const std::string& value) {
+inline void Collision::_internal_set_contributing_factor_vehicle_1(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.contributing_factor_vehicle_1_.Set(value, GetArena());
 }
-inline std::string* GRPCollision::_internal_mutable_contributing_factor_vehicle_1() {
+inline std::string* Collision::_internal_mutable_contributing_factor_vehicle_1() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.contributing_factor_vehicle_1_.Mutable( GetArena());
 }
-inline std::string* GRPCollision::release_contributing_factor_vehicle_1() {
+inline std::string* Collision::release_contributing_factor_vehicle_1() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:GRPCollision.contributing_factor_vehicle_1)
+  // @@protoc_insertion_point(field_release:collision_proto.Collision.contributing_factor_vehicle_1)
   return _impl_.contributing_factor_vehicle_1_.Release();
 }
-inline void GRPCollision::set_allocated_contributing_factor_vehicle_1(std::string* value) {
+inline void Collision::set_allocated_contributing_factor_vehicle_1(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.contributing_factor_vehicle_1_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2244,49 +2247,49 @@ inline void GRPCollision::set_allocated_contributing_factor_vehicle_1(std::strin
           _impl_.contributing_factor_vehicle_1_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:GRPCollision.contributing_factor_vehicle_1)
+  // @@protoc_insertion_point(field_set_allocated:collision_proto.Collision.contributing_factor_vehicle_1)
 }
 
 // string contributing_factor_vehicle_2 = 20;
-inline void GRPCollision::clear_contributing_factor_vehicle_2() {
+inline void Collision::clear_contributing_factor_vehicle_2() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.contributing_factor_vehicle_2_.ClearToEmpty();
 }
-inline const std::string& GRPCollision::contributing_factor_vehicle_2() const
+inline const std::string& Collision::contributing_factor_vehicle_2() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:GRPCollision.contributing_factor_vehicle_2)
+  // @@protoc_insertion_point(field_get:collision_proto.Collision.contributing_factor_vehicle_2)
   return _internal_contributing_factor_vehicle_2();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void GRPCollision::set_contributing_factor_vehicle_2(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void Collision::set_contributing_factor_vehicle_2(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.contributing_factor_vehicle_2_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:GRPCollision.contributing_factor_vehicle_2)
+  // @@protoc_insertion_point(field_set:collision_proto.Collision.contributing_factor_vehicle_2)
 }
-inline std::string* GRPCollision::mutable_contributing_factor_vehicle_2() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* Collision::mutable_contributing_factor_vehicle_2() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_contributing_factor_vehicle_2();
-  // @@protoc_insertion_point(field_mutable:GRPCollision.contributing_factor_vehicle_2)
+  // @@protoc_insertion_point(field_mutable:collision_proto.Collision.contributing_factor_vehicle_2)
   return _s;
 }
-inline const std::string& GRPCollision::_internal_contributing_factor_vehicle_2() const {
+inline const std::string& Collision::_internal_contributing_factor_vehicle_2() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.contributing_factor_vehicle_2_.Get();
 }
-inline void GRPCollision::_internal_set_contributing_factor_vehicle_2(const std::string& value) {
+inline void Collision::_internal_set_contributing_factor_vehicle_2(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.contributing_factor_vehicle_2_.Set(value, GetArena());
 }
-inline std::string* GRPCollision::_internal_mutable_contributing_factor_vehicle_2() {
+inline std::string* Collision::_internal_mutable_contributing_factor_vehicle_2() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.contributing_factor_vehicle_2_.Mutable( GetArena());
 }
-inline std::string* GRPCollision::release_contributing_factor_vehicle_2() {
+inline std::string* Collision::release_contributing_factor_vehicle_2() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:GRPCollision.contributing_factor_vehicle_2)
+  // @@protoc_insertion_point(field_release:collision_proto.Collision.contributing_factor_vehicle_2)
   return _impl_.contributing_factor_vehicle_2_.Release();
 }
-inline void GRPCollision::set_allocated_contributing_factor_vehicle_2(std::string* value) {
+inline void Collision::set_allocated_contributing_factor_vehicle_2(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.contributing_factor_vehicle_2_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2294,49 +2297,49 @@ inline void GRPCollision::set_allocated_contributing_factor_vehicle_2(std::strin
           _impl_.contributing_factor_vehicle_2_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:GRPCollision.contributing_factor_vehicle_2)
+  // @@protoc_insertion_point(field_set_allocated:collision_proto.Collision.contributing_factor_vehicle_2)
 }
 
 // string contributing_factor_vehicle_3 = 21;
-inline void GRPCollision::clear_contributing_factor_vehicle_3() {
+inline void Collision::clear_contributing_factor_vehicle_3() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.contributing_factor_vehicle_3_.ClearToEmpty();
 }
-inline const std::string& GRPCollision::contributing_factor_vehicle_3() const
+inline const std::string& Collision::contributing_factor_vehicle_3() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:GRPCollision.contributing_factor_vehicle_3)
+  // @@protoc_insertion_point(field_get:collision_proto.Collision.contributing_factor_vehicle_3)
   return _internal_contributing_factor_vehicle_3();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void GRPCollision::set_contributing_factor_vehicle_3(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void Collision::set_contributing_factor_vehicle_3(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.contributing_factor_vehicle_3_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:GRPCollision.contributing_factor_vehicle_3)
+  // @@protoc_insertion_point(field_set:collision_proto.Collision.contributing_factor_vehicle_3)
 }
-inline std::string* GRPCollision::mutable_contributing_factor_vehicle_3() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* Collision::mutable_contributing_factor_vehicle_3() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_contributing_factor_vehicle_3();
-  // @@protoc_insertion_point(field_mutable:GRPCollision.contributing_factor_vehicle_3)
+  // @@protoc_insertion_point(field_mutable:collision_proto.Collision.contributing_factor_vehicle_3)
   return _s;
 }
-inline const std::string& GRPCollision::_internal_contributing_factor_vehicle_3() const {
+inline const std::string& Collision::_internal_contributing_factor_vehicle_3() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.contributing_factor_vehicle_3_.Get();
 }
-inline void GRPCollision::_internal_set_contributing_factor_vehicle_3(const std::string& value) {
+inline void Collision::_internal_set_contributing_factor_vehicle_3(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.contributing_factor_vehicle_3_.Set(value, GetArena());
 }
-inline std::string* GRPCollision::_internal_mutable_contributing_factor_vehicle_3() {
+inline std::string* Collision::_internal_mutable_contributing_factor_vehicle_3() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.contributing_factor_vehicle_3_.Mutable( GetArena());
 }
-inline std::string* GRPCollision::release_contributing_factor_vehicle_3() {
+inline std::string* Collision::release_contributing_factor_vehicle_3() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:GRPCollision.contributing_factor_vehicle_3)
+  // @@protoc_insertion_point(field_release:collision_proto.Collision.contributing_factor_vehicle_3)
   return _impl_.contributing_factor_vehicle_3_.Release();
 }
-inline void GRPCollision::set_allocated_contributing_factor_vehicle_3(std::string* value) {
+inline void Collision::set_allocated_contributing_factor_vehicle_3(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.contributing_factor_vehicle_3_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2344,49 +2347,49 @@ inline void GRPCollision::set_allocated_contributing_factor_vehicle_3(std::strin
           _impl_.contributing_factor_vehicle_3_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:GRPCollision.contributing_factor_vehicle_3)
+  // @@protoc_insertion_point(field_set_allocated:collision_proto.Collision.contributing_factor_vehicle_3)
 }
 
 // string contributing_factor_vehicle_4 = 22;
-inline void GRPCollision::clear_contributing_factor_vehicle_4() {
+inline void Collision::clear_contributing_factor_vehicle_4() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.contributing_factor_vehicle_4_.ClearToEmpty();
 }
-inline const std::string& GRPCollision::contributing_factor_vehicle_4() const
+inline const std::string& Collision::contributing_factor_vehicle_4() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:GRPCollision.contributing_factor_vehicle_4)
+  // @@protoc_insertion_point(field_get:collision_proto.Collision.contributing_factor_vehicle_4)
   return _internal_contributing_factor_vehicle_4();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void GRPCollision::set_contributing_factor_vehicle_4(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void Collision::set_contributing_factor_vehicle_4(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.contributing_factor_vehicle_4_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:GRPCollision.contributing_factor_vehicle_4)
+  // @@protoc_insertion_point(field_set:collision_proto.Collision.contributing_factor_vehicle_4)
 }
-inline std::string* GRPCollision::mutable_contributing_factor_vehicle_4() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* Collision::mutable_contributing_factor_vehicle_4() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_contributing_factor_vehicle_4();
-  // @@protoc_insertion_point(field_mutable:GRPCollision.contributing_factor_vehicle_4)
+  // @@protoc_insertion_point(field_mutable:collision_proto.Collision.contributing_factor_vehicle_4)
   return _s;
 }
-inline const std::string& GRPCollision::_internal_contributing_factor_vehicle_4() const {
+inline const std::string& Collision::_internal_contributing_factor_vehicle_4() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.contributing_factor_vehicle_4_.Get();
 }
-inline void GRPCollision::_internal_set_contributing_factor_vehicle_4(const std::string& value) {
+inline void Collision::_internal_set_contributing_factor_vehicle_4(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.contributing_factor_vehicle_4_.Set(value, GetArena());
 }
-inline std::string* GRPCollision::_internal_mutable_contributing_factor_vehicle_4() {
+inline std::string* Collision::_internal_mutable_contributing_factor_vehicle_4() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.contributing_factor_vehicle_4_.Mutable( GetArena());
 }
-inline std::string* GRPCollision::release_contributing_factor_vehicle_4() {
+inline std::string* Collision::release_contributing_factor_vehicle_4() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:GRPCollision.contributing_factor_vehicle_4)
+  // @@protoc_insertion_point(field_release:collision_proto.Collision.contributing_factor_vehicle_4)
   return _impl_.contributing_factor_vehicle_4_.Release();
 }
-inline void GRPCollision::set_allocated_contributing_factor_vehicle_4(std::string* value) {
+inline void Collision::set_allocated_contributing_factor_vehicle_4(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.contributing_factor_vehicle_4_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2394,49 +2397,49 @@ inline void GRPCollision::set_allocated_contributing_factor_vehicle_4(std::strin
           _impl_.contributing_factor_vehicle_4_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:GRPCollision.contributing_factor_vehicle_4)
+  // @@protoc_insertion_point(field_set_allocated:collision_proto.Collision.contributing_factor_vehicle_4)
 }
 
 // string contributing_factor_vehicle_5 = 23;
-inline void GRPCollision::clear_contributing_factor_vehicle_5() {
+inline void Collision::clear_contributing_factor_vehicle_5() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.contributing_factor_vehicle_5_.ClearToEmpty();
 }
-inline const std::string& GRPCollision::contributing_factor_vehicle_5() const
+inline const std::string& Collision::contributing_factor_vehicle_5() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:GRPCollision.contributing_factor_vehicle_5)
+  // @@protoc_insertion_point(field_get:collision_proto.Collision.contributing_factor_vehicle_5)
   return _internal_contributing_factor_vehicle_5();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void GRPCollision::set_contributing_factor_vehicle_5(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void Collision::set_contributing_factor_vehicle_5(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.contributing_factor_vehicle_5_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:GRPCollision.contributing_factor_vehicle_5)
+  // @@protoc_insertion_point(field_set:collision_proto.Collision.contributing_factor_vehicle_5)
 }
-inline std::string* GRPCollision::mutable_contributing_factor_vehicle_5() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* Collision::mutable_contributing_factor_vehicle_5() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_contributing_factor_vehicle_5();
-  // @@protoc_insertion_point(field_mutable:GRPCollision.contributing_factor_vehicle_5)
+  // @@protoc_insertion_point(field_mutable:collision_proto.Collision.contributing_factor_vehicle_5)
   return _s;
 }
-inline const std::string& GRPCollision::_internal_contributing_factor_vehicle_5() const {
+inline const std::string& Collision::_internal_contributing_factor_vehicle_5() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.contributing_factor_vehicle_5_.Get();
 }
-inline void GRPCollision::_internal_set_contributing_factor_vehicle_5(const std::string& value) {
+inline void Collision::_internal_set_contributing_factor_vehicle_5(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.contributing_factor_vehicle_5_.Set(value, GetArena());
 }
-inline std::string* GRPCollision::_internal_mutable_contributing_factor_vehicle_5() {
+inline std::string* Collision::_internal_mutable_contributing_factor_vehicle_5() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.contributing_factor_vehicle_5_.Mutable( GetArena());
 }
-inline std::string* GRPCollision::release_contributing_factor_vehicle_5() {
+inline std::string* Collision::release_contributing_factor_vehicle_5() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:GRPCollision.contributing_factor_vehicle_5)
+  // @@protoc_insertion_point(field_release:collision_proto.Collision.contributing_factor_vehicle_5)
   return _impl_.contributing_factor_vehicle_5_.Release();
 }
-inline void GRPCollision::set_allocated_contributing_factor_vehicle_5(std::string* value) {
+inline void Collision::set_allocated_contributing_factor_vehicle_5(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.contributing_factor_vehicle_5_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2444,71 +2447,71 @@ inline void GRPCollision::set_allocated_contributing_factor_vehicle_5(std::strin
           _impl_.contributing_factor_vehicle_5_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:GRPCollision.contributing_factor_vehicle_5)
+  // @@protoc_insertion_point(field_set_allocated:collision_proto.Collision.contributing_factor_vehicle_5)
 }
 
 // uint64 collision_id = 24;
-inline void GRPCollision::clear_collision_id() {
+inline void Collision::clear_collision_id() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.collision_id_ = ::uint64_t{0u};
 }
-inline ::uint64_t GRPCollision::collision_id() const {
-  // @@protoc_insertion_point(field_get:GRPCollision.collision_id)
+inline ::uint64_t Collision::collision_id() const {
+  // @@protoc_insertion_point(field_get:collision_proto.Collision.collision_id)
   return _internal_collision_id();
 }
-inline void GRPCollision::set_collision_id(::uint64_t value) {
+inline void Collision::set_collision_id(::uint64_t value) {
   _internal_set_collision_id(value);
-  // @@protoc_insertion_point(field_set:GRPCollision.collision_id)
+  // @@protoc_insertion_point(field_set:collision_proto.Collision.collision_id)
 }
-inline ::uint64_t GRPCollision::_internal_collision_id() const {
+inline ::uint64_t Collision::_internal_collision_id() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.collision_id_;
 }
-inline void GRPCollision::_internal_set_collision_id(::uint64_t value) {
+inline void Collision::_internal_set_collision_id(::uint64_t value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.collision_id_ = value;
 }
 
 // string vehicle_type_code_1 = 25;
-inline void GRPCollision::clear_vehicle_type_code_1() {
+inline void Collision::clear_vehicle_type_code_1() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.vehicle_type_code_1_.ClearToEmpty();
 }
-inline const std::string& GRPCollision::vehicle_type_code_1() const
+inline const std::string& Collision::vehicle_type_code_1() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:GRPCollision.vehicle_type_code_1)
+  // @@protoc_insertion_point(field_get:collision_proto.Collision.vehicle_type_code_1)
   return _internal_vehicle_type_code_1();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void GRPCollision::set_vehicle_type_code_1(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void Collision::set_vehicle_type_code_1(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.vehicle_type_code_1_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:GRPCollision.vehicle_type_code_1)
+  // @@protoc_insertion_point(field_set:collision_proto.Collision.vehicle_type_code_1)
 }
-inline std::string* GRPCollision::mutable_vehicle_type_code_1() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* Collision::mutable_vehicle_type_code_1() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_vehicle_type_code_1();
-  // @@protoc_insertion_point(field_mutable:GRPCollision.vehicle_type_code_1)
+  // @@protoc_insertion_point(field_mutable:collision_proto.Collision.vehicle_type_code_1)
   return _s;
 }
-inline const std::string& GRPCollision::_internal_vehicle_type_code_1() const {
+inline const std::string& Collision::_internal_vehicle_type_code_1() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.vehicle_type_code_1_.Get();
 }
-inline void GRPCollision::_internal_set_vehicle_type_code_1(const std::string& value) {
+inline void Collision::_internal_set_vehicle_type_code_1(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.vehicle_type_code_1_.Set(value, GetArena());
 }
-inline std::string* GRPCollision::_internal_mutable_vehicle_type_code_1() {
+inline std::string* Collision::_internal_mutable_vehicle_type_code_1() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.vehicle_type_code_1_.Mutable( GetArena());
 }
-inline std::string* GRPCollision::release_vehicle_type_code_1() {
+inline std::string* Collision::release_vehicle_type_code_1() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:GRPCollision.vehicle_type_code_1)
+  // @@protoc_insertion_point(field_release:collision_proto.Collision.vehicle_type_code_1)
   return _impl_.vehicle_type_code_1_.Release();
 }
-inline void GRPCollision::set_allocated_vehicle_type_code_1(std::string* value) {
+inline void Collision::set_allocated_vehicle_type_code_1(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.vehicle_type_code_1_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2516,49 +2519,49 @@ inline void GRPCollision::set_allocated_vehicle_type_code_1(std::string* value) 
           _impl_.vehicle_type_code_1_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:GRPCollision.vehicle_type_code_1)
+  // @@protoc_insertion_point(field_set_allocated:collision_proto.Collision.vehicle_type_code_1)
 }
 
 // string vehicle_type_code_2 = 26;
-inline void GRPCollision::clear_vehicle_type_code_2() {
+inline void Collision::clear_vehicle_type_code_2() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.vehicle_type_code_2_.ClearToEmpty();
 }
-inline const std::string& GRPCollision::vehicle_type_code_2() const
+inline const std::string& Collision::vehicle_type_code_2() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:GRPCollision.vehicle_type_code_2)
+  // @@protoc_insertion_point(field_get:collision_proto.Collision.vehicle_type_code_2)
   return _internal_vehicle_type_code_2();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void GRPCollision::set_vehicle_type_code_2(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void Collision::set_vehicle_type_code_2(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.vehicle_type_code_2_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:GRPCollision.vehicle_type_code_2)
+  // @@protoc_insertion_point(field_set:collision_proto.Collision.vehicle_type_code_2)
 }
-inline std::string* GRPCollision::mutable_vehicle_type_code_2() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* Collision::mutable_vehicle_type_code_2() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_vehicle_type_code_2();
-  // @@protoc_insertion_point(field_mutable:GRPCollision.vehicle_type_code_2)
+  // @@protoc_insertion_point(field_mutable:collision_proto.Collision.vehicle_type_code_2)
   return _s;
 }
-inline const std::string& GRPCollision::_internal_vehicle_type_code_2() const {
+inline const std::string& Collision::_internal_vehicle_type_code_2() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.vehicle_type_code_2_.Get();
 }
-inline void GRPCollision::_internal_set_vehicle_type_code_2(const std::string& value) {
+inline void Collision::_internal_set_vehicle_type_code_2(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.vehicle_type_code_2_.Set(value, GetArena());
 }
-inline std::string* GRPCollision::_internal_mutable_vehicle_type_code_2() {
+inline std::string* Collision::_internal_mutable_vehicle_type_code_2() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.vehicle_type_code_2_.Mutable( GetArena());
 }
-inline std::string* GRPCollision::release_vehicle_type_code_2() {
+inline std::string* Collision::release_vehicle_type_code_2() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:GRPCollision.vehicle_type_code_2)
+  // @@protoc_insertion_point(field_release:collision_proto.Collision.vehicle_type_code_2)
   return _impl_.vehicle_type_code_2_.Release();
 }
-inline void GRPCollision::set_allocated_vehicle_type_code_2(std::string* value) {
+inline void Collision::set_allocated_vehicle_type_code_2(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.vehicle_type_code_2_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2566,49 +2569,49 @@ inline void GRPCollision::set_allocated_vehicle_type_code_2(std::string* value) 
           _impl_.vehicle_type_code_2_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:GRPCollision.vehicle_type_code_2)
+  // @@protoc_insertion_point(field_set_allocated:collision_proto.Collision.vehicle_type_code_2)
 }
 
 // string vehicle_type_code_3 = 27;
-inline void GRPCollision::clear_vehicle_type_code_3() {
+inline void Collision::clear_vehicle_type_code_3() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.vehicle_type_code_3_.ClearToEmpty();
 }
-inline const std::string& GRPCollision::vehicle_type_code_3() const
+inline const std::string& Collision::vehicle_type_code_3() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:GRPCollision.vehicle_type_code_3)
+  // @@protoc_insertion_point(field_get:collision_proto.Collision.vehicle_type_code_3)
   return _internal_vehicle_type_code_3();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void GRPCollision::set_vehicle_type_code_3(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void Collision::set_vehicle_type_code_3(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.vehicle_type_code_3_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:GRPCollision.vehicle_type_code_3)
+  // @@protoc_insertion_point(field_set:collision_proto.Collision.vehicle_type_code_3)
 }
-inline std::string* GRPCollision::mutable_vehicle_type_code_3() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* Collision::mutable_vehicle_type_code_3() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_vehicle_type_code_3();
-  // @@protoc_insertion_point(field_mutable:GRPCollision.vehicle_type_code_3)
+  // @@protoc_insertion_point(field_mutable:collision_proto.Collision.vehicle_type_code_3)
   return _s;
 }
-inline const std::string& GRPCollision::_internal_vehicle_type_code_3() const {
+inline const std::string& Collision::_internal_vehicle_type_code_3() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.vehicle_type_code_3_.Get();
 }
-inline void GRPCollision::_internal_set_vehicle_type_code_3(const std::string& value) {
+inline void Collision::_internal_set_vehicle_type_code_3(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.vehicle_type_code_3_.Set(value, GetArena());
 }
-inline std::string* GRPCollision::_internal_mutable_vehicle_type_code_3() {
+inline std::string* Collision::_internal_mutable_vehicle_type_code_3() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.vehicle_type_code_3_.Mutable( GetArena());
 }
-inline std::string* GRPCollision::release_vehicle_type_code_3() {
+inline std::string* Collision::release_vehicle_type_code_3() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:GRPCollision.vehicle_type_code_3)
+  // @@protoc_insertion_point(field_release:collision_proto.Collision.vehicle_type_code_3)
   return _impl_.vehicle_type_code_3_.Release();
 }
-inline void GRPCollision::set_allocated_vehicle_type_code_3(std::string* value) {
+inline void Collision::set_allocated_vehicle_type_code_3(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.vehicle_type_code_3_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2616,49 +2619,49 @@ inline void GRPCollision::set_allocated_vehicle_type_code_3(std::string* value) 
           _impl_.vehicle_type_code_3_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:GRPCollision.vehicle_type_code_3)
+  // @@protoc_insertion_point(field_set_allocated:collision_proto.Collision.vehicle_type_code_3)
 }
 
 // string vehicle_type_code_4 = 28;
-inline void GRPCollision::clear_vehicle_type_code_4() {
+inline void Collision::clear_vehicle_type_code_4() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.vehicle_type_code_4_.ClearToEmpty();
 }
-inline const std::string& GRPCollision::vehicle_type_code_4() const
+inline const std::string& Collision::vehicle_type_code_4() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:GRPCollision.vehicle_type_code_4)
+  // @@protoc_insertion_point(field_get:collision_proto.Collision.vehicle_type_code_4)
   return _internal_vehicle_type_code_4();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void GRPCollision::set_vehicle_type_code_4(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void Collision::set_vehicle_type_code_4(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.vehicle_type_code_4_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:GRPCollision.vehicle_type_code_4)
+  // @@protoc_insertion_point(field_set:collision_proto.Collision.vehicle_type_code_4)
 }
-inline std::string* GRPCollision::mutable_vehicle_type_code_4() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* Collision::mutable_vehicle_type_code_4() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_vehicle_type_code_4();
-  // @@protoc_insertion_point(field_mutable:GRPCollision.vehicle_type_code_4)
+  // @@protoc_insertion_point(field_mutable:collision_proto.Collision.vehicle_type_code_4)
   return _s;
 }
-inline const std::string& GRPCollision::_internal_vehicle_type_code_4() const {
+inline const std::string& Collision::_internal_vehicle_type_code_4() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.vehicle_type_code_4_.Get();
 }
-inline void GRPCollision::_internal_set_vehicle_type_code_4(const std::string& value) {
+inline void Collision::_internal_set_vehicle_type_code_4(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.vehicle_type_code_4_.Set(value, GetArena());
 }
-inline std::string* GRPCollision::_internal_mutable_vehicle_type_code_4() {
+inline std::string* Collision::_internal_mutable_vehicle_type_code_4() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.vehicle_type_code_4_.Mutable( GetArena());
 }
-inline std::string* GRPCollision::release_vehicle_type_code_4() {
+inline std::string* Collision::release_vehicle_type_code_4() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:GRPCollision.vehicle_type_code_4)
+  // @@protoc_insertion_point(field_release:collision_proto.Collision.vehicle_type_code_4)
   return _impl_.vehicle_type_code_4_.Release();
 }
-inline void GRPCollision::set_allocated_vehicle_type_code_4(std::string* value) {
+inline void Collision::set_allocated_vehicle_type_code_4(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.vehicle_type_code_4_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2666,49 +2669,49 @@ inline void GRPCollision::set_allocated_vehicle_type_code_4(std::string* value) 
           _impl_.vehicle_type_code_4_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:GRPCollision.vehicle_type_code_4)
+  // @@protoc_insertion_point(field_set_allocated:collision_proto.Collision.vehicle_type_code_4)
 }
 
 // string vehicle_type_code_5 = 29;
-inline void GRPCollision::clear_vehicle_type_code_5() {
+inline void Collision::clear_vehicle_type_code_5() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.vehicle_type_code_5_.ClearToEmpty();
 }
-inline const std::string& GRPCollision::vehicle_type_code_5() const
+inline const std::string& Collision::vehicle_type_code_5() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:GRPCollision.vehicle_type_code_5)
+  // @@protoc_insertion_point(field_get:collision_proto.Collision.vehicle_type_code_5)
   return _internal_vehicle_type_code_5();
 }
 template <typename Arg_, typename... Args_>
-inline PROTOBUF_ALWAYS_INLINE void GRPCollision::set_vehicle_type_code_5(Arg_&& arg,
+inline PROTOBUF_ALWAYS_INLINE void Collision::set_vehicle_type_code_5(Arg_&& arg,
                                                      Args_... args) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.vehicle_type_code_5_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:GRPCollision.vehicle_type_code_5)
+  // @@protoc_insertion_point(field_set:collision_proto.Collision.vehicle_type_code_5)
 }
-inline std::string* GRPCollision::mutable_vehicle_type_code_5() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline std::string* Collision::mutable_vehicle_type_code_5() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   std::string* _s = _internal_mutable_vehicle_type_code_5();
-  // @@protoc_insertion_point(field_mutable:GRPCollision.vehicle_type_code_5)
+  // @@protoc_insertion_point(field_mutable:collision_proto.Collision.vehicle_type_code_5)
   return _s;
 }
-inline const std::string& GRPCollision::_internal_vehicle_type_code_5() const {
+inline const std::string& Collision::_internal_vehicle_type_code_5() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.vehicle_type_code_5_.Get();
 }
-inline void GRPCollision::_internal_set_vehicle_type_code_5(const std::string& value) {
+inline void Collision::_internal_set_vehicle_type_code_5(const std::string& value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.vehicle_type_code_5_.Set(value, GetArena());
 }
-inline std::string* GRPCollision::_internal_mutable_vehicle_type_code_5() {
+inline std::string* Collision::_internal_mutable_vehicle_type_code_5() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _impl_.vehicle_type_code_5_.Mutable( GetArena());
 }
-inline std::string* GRPCollision::release_vehicle_type_code_5() {
+inline std::string* Collision::release_vehicle_type_code_5() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:GRPCollision.vehicle_type_code_5)
+  // @@protoc_insertion_point(field_release:collision_proto.Collision.vehicle_type_code_5)
   return _impl_.vehicle_type_code_5_.Release();
 }
-inline void GRPCollision::set_allocated_vehicle_type_code_5(std::string* value) {
+inline void Collision::set_allocated_vehicle_type_code_5(std::string* value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.vehicle_type_code_5_.SetAllocated(value, GetArena());
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
@@ -2716,14 +2719,14 @@ inline void GRPCollision::set_allocated_vehicle_type_code_5(std::string* value) 
           _impl_.vehicle_type_code_5_.Set("", GetArena());
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:GRPCollision.vehicle_type_code_5)
+  // @@protoc_insertion_point(field_set_allocated:collision_proto.Collision.vehicle_type_code_5)
 }
 
 // -------------------------------------------------------------------
 
 // QueryResponse
 
-// repeated .GRPCollision collision = 1;
+// repeated .collision_proto.Collision collision = 1;
 inline int QueryResponse::_internal_collision_size() const {
   return _internal_collision().size();
 }
@@ -2734,39 +2737,39 @@ inline void QueryResponse::clear_collision() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.collision_.Clear();
 }
-inline ::GRPCollision* QueryResponse::mutable_collision(int index)
+inline ::collision_proto::Collision* QueryResponse::mutable_collision(int index)
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_mutable:QueryResponse.collision)
+  // @@protoc_insertion_point(field_mutable:collision_proto.QueryResponse.collision)
   return _internal_mutable_collision()->Mutable(index);
 }
-inline ::google::protobuf::RepeatedPtrField<::GRPCollision>* QueryResponse::mutable_collision()
+inline ::google::protobuf::RepeatedPtrField<::collision_proto::Collision>* QueryResponse::mutable_collision()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_mutable_list:QueryResponse.collision)
+  // @@protoc_insertion_point(field_mutable_list:collision_proto.QueryResponse.collision)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   return _internal_mutable_collision();
 }
-inline const ::GRPCollision& QueryResponse::collision(int index) const
+inline const ::collision_proto::Collision& QueryResponse::collision(int index) const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:QueryResponse.collision)
+  // @@protoc_insertion_point(field_get:collision_proto.QueryResponse.collision)
   return _internal_collision().Get(index);
 }
-inline ::GRPCollision* QueryResponse::add_collision() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+inline ::collision_proto::Collision* QueryResponse::add_collision() ABSL_ATTRIBUTE_LIFETIME_BOUND {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  ::GRPCollision* _add = _internal_mutable_collision()->Add();
-  // @@protoc_insertion_point(field_add:QueryResponse.collision)
+  ::collision_proto::Collision* _add = _internal_mutable_collision()->Add();
+  // @@protoc_insertion_point(field_add:collision_proto.QueryResponse.collision)
   return _add;
 }
-inline const ::google::protobuf::RepeatedPtrField<::GRPCollision>& QueryResponse::collision() const
+inline const ::google::protobuf::RepeatedPtrField<::collision_proto::Collision>& QueryResponse::collision() const
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_list:QueryResponse.collision)
+  // @@protoc_insertion_point(field_list:collision_proto.QueryResponse.collision)
   return _internal_collision();
 }
-inline const ::google::protobuf::RepeatedPtrField<::GRPCollision>&
+inline const ::google::protobuf::RepeatedPtrField<::collision_proto::Collision>&
 QueryResponse::_internal_collision() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return _impl_.collision_;
 }
-inline ::google::protobuf::RepeatedPtrField<::GRPCollision>*
+inline ::google::protobuf::RepeatedPtrField<::collision_proto::Collision>*
 QueryResponse::_internal_mutable_collision() {
   ::google::protobuf::internal::TSanRead(&_impl_);
   return &_impl_.collision_;
@@ -2777,22 +2780,23 @@ QueryResponse::_internal_mutable_collision() {
 #endif  // __GNUC__
 
 // @@protoc_insertion_point(namespace_scope)
+}  // namespace collision_proto
 
 
 namespace google {
 namespace protobuf {
 
 template <>
-struct is_proto_enum<::Condition> : std::true_type {};
+struct is_proto_enum<::collision_proto::Condition> : std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor<::Condition>() {
-  return ::Condition_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor<::collision_proto::Condition>() {
+  return ::collision_proto::Condition_descriptor();
 }
 template <>
-struct is_proto_enum<::QueryFields> : std::true_type {};
+struct is_proto_enum<::collision_proto::QueryFields> : std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor<::QueryFields>() {
-  return ::QueryFields_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor<::collision_proto::QueryFields>() {
+  return ::collision_proto::QueryFields_descriptor();
 }
 
 }  // namespace protobuf
