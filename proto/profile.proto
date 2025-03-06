@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package profile;
+
+// Service definition
+
+service ProfileManager{
+
+	rpc GetName (ProfileRequest) returns (ProfileResponse); 
+}
+
+
+message ProfileRequest {
+	string title = 1;
+}
+
+message ProfileResponse {
+	string name = 1;
+}

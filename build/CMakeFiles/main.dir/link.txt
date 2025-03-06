@@ -1,0 +1,1 @@
+/usr/bin/c++  -g3 -fopenmp -rdynamic CMakeFiles/main.dir/main.cpp.o -o main  libcollision_manager.a /usr/lib/gcc/x86_64-linux-gnu/13/libgomp.so /usr/lib/x86_64-linux-gnu/libpthread.a 

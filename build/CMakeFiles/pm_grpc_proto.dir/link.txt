@@ -1,0 +1,2 @@
+/usr/bin/ar qc libpm_grpc_proto.a CMakeFiles/pm_grpc_proto.dir/collision.grpc.pb.cc.o CMakeFiles/pm_grpc_proto.dir/collision.pb.cc.o
+/usr/bin/ranlib libpm_grpc_proto.a

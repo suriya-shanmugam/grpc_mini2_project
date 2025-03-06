@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcollision_manager.a CMakeFiles/collision_manager.dir/query.cpp.o CMakeFiles/collision_manager.dir/collision.cpp.o CMakeFiles/collision_manager.dir/collision_parser.cpp.o CMakeFiles/collision_manager.dir/collision_manager.cpp.o
+/usr/bin/ranlib libcollision_manager.a

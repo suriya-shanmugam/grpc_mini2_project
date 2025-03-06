@@ -1,0 +1,5 @@
+if(EXISTS "/home/suriya-018231499/sem2/cmpe273/mini2/collisionproject/275_mini1/temp2/build/collision_manager_test[1]_tests.cmake")
+  include("/home/suriya-018231499/sem2/cmpe273/mini2/collisionproject/275_mini1/temp2/build/collision_manager_test[1]_tests.cmake")
+else()
+  add_test(collision_manager_test_NOT_BUILT collision_manager_test_NOT_BUILT)
+endif()
